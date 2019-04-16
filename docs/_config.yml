@@ -1,2 +1,9 @@
-name: Kamil Ševeček
+title: JavaBrno-Web
 markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: "/:categories/:title:output_ext"

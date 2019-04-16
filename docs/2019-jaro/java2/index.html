@@ -1,0 +1,122 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/styles.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/menu.css"/>
+    <title>Java 2 - Webové aplikace | Czechitas</title>
+</head>
+
+<body>
+    <div id="page">
+
+{% include 2019-jaro/java2/title.html %}
+
+{% include 2019-jaro/java2/menu.html %}
+
+
+        {% for post in site.posts %}
+        <div class="content">
+            <span class="published-timestamp">Vloženo: {{ post.date | date_to_string }}</span>
+            <h3>
+                {{post.title}}
+            </h3>
+
+            <p>
+                {{ post.excerpt }}
+            </p>
+            <p>
+                <a href="{{ post.url }}">Číst více</a>
+            </p>
+        </div>
+
+        {% endfor %}
+
+
+        <div class="content">
+            <span class="published-timestamp">Vloženo: 21. 2. 2019</span>
+            <h3>
+                Kurz Java 2 - Webové aplikace - pro mírně pokročilé
+            </h3>
+
+            <p>
+                Kurz se zaměřuje na praktický vývoj webových aplikací (serverové strany) v Javě s frameworkem Spring Boot. Java se nejčastěji používá právě pro vývoj webových aplikací (jejich serverové strany) a také pro vývoj androidových aplikací. Tento kurz se zaměřuje na první z těchto dvou oblastí.
+            </p>
+
+            <p>
+                Jak asi tušíš, webový prohlížeč zpracovává HTML, CSS a JavaScript. Když ale na webu vyplníš nějaký formulář a odešleš ho, dojde tento požadavek na webový server a ten jej musí zpracovat (a výsledky typicky uložit do databáze). A tady přichází ke slovu Java.
+            </p>
+
+            <p>
+                Budeme používat webový server Apache Tomcat. Nasazovat na něj webové aplikace se Spring Bootem, jejichž jádro bude opřené především o Spring MVC se server-side renderingem webových stránek (Thymeleaf). V pozdějších lekcích budeme z Javy přistupovat do databázového serveru MariaDB pomocí Spring JDBC Template.
+            </p>
+
+            <p>
+                Na kurzu budeme používat plnou verzi programátorského editoru IntelliJ IDEA - Ultimate Edition, kterou nám poskytuje firma JetBrains jako sponzorský dar.
+            </p>
+
+            <h4>Náplň lekcí</h4>
+            <ol>
+                <li>Webový prohlížeč, webové stránky, webový server</li>
+                <li>HTML stránka generovaná na serveru ze šablony</li>
+                <li>Formuláře v HTML, zpracování na serveru v Javě</li>
+                <li>Přístup do databáze z Javy, Spring JDBC Template</li>
+                <li>HTML tabulka vyplněná z databáze</li>
+                <li>Evidence záznamů ve více tabulkách v databázi</li>
+            </ol>
+
+            <h4>Organizační pokyny</h4>
+
+            <p>
+                Kurz probíhá v Brně v prostorách Fakulty informatiky Masarykovy univerzity.<br/>
+                (Samozřejmě nemusíte být studentky, přístup do učebny zajistíme hromadně po uzavření registrace).
+            </p>
+
+            <h4>
+                Termíny jednotlivých lekcí (vždy čvtrtek 18:00-20:30)
+            </h4>
+
+            <ul>
+                <li>21. 2. 2019</li>
+                <li>28. 2. 2019</li>
+                <li><i>Vynechaný týden</i></li>
+                <li>14. 3. 2019</li>
+                <li>21. 3. 2019</li>
+                <li>28. 3. 2019</li>
+                <li>4. 4. 2019</li>
+                <li>11. 4. 2019</li>
+                <li><i>Vynechaný týden</i></li>
+                <li>25. 4. 2019</li>
+                <li>2. 5. 2019</li>
+                <li>9. 5. 2019</li>
+                <li><i>Vynechaný týden</i></li>
+                <li>23. 5. 2019</li>
+                <li>30. 5. 2019</li>
+            </ul>
+
+            <p>Je opravdu důležité, abyste mohly přijít na všechny hodiny.</p>
+            <p>Druhou zásadní podmínkou jsou domácí úkoly.
+                Budete dostávat domácí úkol na většině lekcí,
+                proto počítej, že mimo času lekce (ve čtvrtek večer)
+                bude třeba věnovat kurzu ještě několik hodin, například o víkendu.
+                Domácí úkoly se ukázaly jako nejefektivnější způsob,
+                jak se látku naučit. Máte čas s Javou pořádně experimentovat,
+                řešit problémy a musíte si s nimi poradit.
+                Je dokonce možné řešit úkoly ve dvojici.
+                My vám rádi pomůžeme přes Facebook, Skype, osobně...</p>
+
+            <p>Úspěšná absolventka kurzu má maximálně 3 absence
+               a musí úspěšně odevzdat všech 8 povinných domácích úkolů.</p>
+
+            <p>Těšíme se na Tebe :-)</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
