@@ -7,3 +7,4 @@ defaults:
       type: "posts"
     values:
       permalink: "/:categories/:title:output_ext"
+      layout: default-post
