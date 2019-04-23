@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css2"/>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/> -->
     <title>Java 2 - Webové aplikace | Czechitas</title>
     <style>
     	.markdown-body {
@@ -28,21 +28,25 @@
 <body>
     <div id="page">
 
-{% include 2019-jaro/java2/title.html %}
+{% assign base_url = page.categories | join: "/" | append: "/" %}
+{% assign title_url = base_url | append: "title.html" %}
+{% assign menu_url = base_url | append: "menu.html" %}
 
-{% include 2019-jaro/java2/menu.html %}
+{% include {{ title_url }} %}
+{% include {{ menu_url }} %}
 
-<div class="content">
-            <span class="published-timestamp">Vloženo: {{ page.date | date_to_string }}</span>
 
-<article class="markdown-body">
+        <div class="content">
+            <span class="published-timestamp">Vloženo: {{ page.date | date: "%-d. %-m. %Y" }}</span>
+
+            <article class="markdown-body">
 
 {{ content }}
 
-</article>
+            </article>
 
 
-</div>
+        </div>
 	</div>
 
 </body>

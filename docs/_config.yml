@@ -3,8 +3,13 @@ markdown: kramdown
 
 defaults:
   - scope:
+      path: "2019-jaro/java2"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
       permalink: "/:categories/:title:output_ext"
-      layout: default-post
+      layout: null
