@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # Letní Škola 2018 - JavaScript
 
 Podklady pro druhou polovinu dne výuky JavaScriptu.
