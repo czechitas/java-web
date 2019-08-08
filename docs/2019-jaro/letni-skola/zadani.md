@@ -186,7 +186,7 @@ minceX = Math.floor(Math.random() * (document.documentElement.clientWidth - minc
 minceY = Math.floor(Math.random() * (document.documentElement.clientHeight - minceVyska));
 ~~~
 ~~~
-minceX = 100;
+minceY = 100;
 ~~~
 ~~~
 objektMince.style.left = minceX + "px";
