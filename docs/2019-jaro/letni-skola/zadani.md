@@ -1,5 +1,4 @@
 ---
-layout: null
 ---
 
 # Letní Škola 2018 - JavaScript
