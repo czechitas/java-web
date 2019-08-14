@@ -1,4 +1,4 @@
-# Letní Škola 2018 - JavaScript
+# Letní Škola 2019 - JavaScript
 
 Podklady pro druhou polovinu dne výuky JavaScriptu.
 
