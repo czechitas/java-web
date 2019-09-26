@@ -8,6 +8,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2019-podzim/java1"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
