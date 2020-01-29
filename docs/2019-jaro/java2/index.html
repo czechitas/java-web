@@ -1,51 +1,42 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="cs"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/../../css/styles.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/../../css/github-markdown.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Java 2 | Czechitas</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
+    <title>Java 2 - Webové aplikace | Czechitas</title>
 </head>
+
 <body>
     <div id="page">
-        <div class="header">
-            <a href="/"><img src="/../img/logo.png" alt="Logo Czechitas"/></a>
-        </div>
-        <div id="title">
-            <h1>Java 2</h1>
-            <h2>Tříměsíční kurz Javy pro mírně pokročilé</h2>
-        </div>
-    
-    {% include_relative | menu.html %}
-
-    <div class="list-lessons">
-
-    {% for post in site.posts %}
-    <div class="lesson">
-        {% if post.categories[0] == "2019-jaro" and post.categories[1] == "java2" %}
-        {% if post.display_full %}
-            <div>
-                <span class="published-timestamp">{{ post.date | date: "%-d. %-m. %Y" }}</span>
-                <h2 id="úkol-03---metody-s-parametrem">{{ post }}}</h2>
+        {% include 2019-jaro/java2/title.html %}
+        {% include 2019-jaro/java2/menu.html %}
+        <div class="list-lessons">
+            {% for post in site.posts %}
+            {% if post.categories[0] == "2019-jaro" and post.categories[1] == "java2" %}
+            <div class="lesson">
+                <div class="content">
+                    <div>
+                        <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>
+                        {% if post.display_full %}
+                            {{ post.content }}
+                        {% else %}
+                            {{ post.excerpt }}
+                        {% endif %}
+                    </div>
+                    <div>
+                        <div><a class="button__show" href="{{ post.url }}">Detail zde...</a></div>
+                    </div>                    
+                </div> 
+            {% endif %} 
             </div>
-            {{ post.content }}
-
-        {% else %}
-
-            {{ post.excerpt }}
-
-            <div><a class="button__show" href="{{ post.url }}">Detail zde...</a></div>
+            {% endfor %}   
         </div>
-
-        {% endif %}
-    
     </div>
-    </div>
-    {% endif %}
-    {% endfor %}
- </body>
- </html>   
-
-    
+</body>
+</html>

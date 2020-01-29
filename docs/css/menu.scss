@@ -1,0 +1,85 @@
+---
+---
+/* -------------------- menu ------------------------ */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-menu);
+}
+
+li {
+  padding: 0;
+}
+
+.menu li a {
+  display: inline-block;
+  color: var(--tx-menu);
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.menu li a:hover {
+  color: var(--bg-dark-primary-color);
+  padding: 10px;
+}
+
+/* -------------------- responsivita ------------------------ */
+
+@media (min-width: 700px) {
+  #page {
+      display: flex;
+      justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+  
+.list-courses, .list-lessons, #menu-wrap {
+  flex-basis: 100%;
+  }
+
+  .list-courses, .list-lessons {
+      grid-template-columns: repeat(2, minmax(300px, 400px));
+  } 
+
+  .menu {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+}
+
+
+@media (min-width: 900px) {
+  #page {
+      justify-content: flex-start;
+  }
+  
+  .header,
+  #title {
+      flex-basis: 33%;
+  }
+
+.list-courses, .list-lessons, #menu-wrap {
+  flex-basis: 100%;
+  }
+  
+  .list-courses, .list-lessons {
+      grid-template-columns: repeat(2, minmax(300px, 400px));
+  } 
+}
+
+
+@media (min-width: 1000px) {
+  
+  .list-courses, .list-lessons {
+      grid-template-columns: repeat(3, minmax(300px, 400px));
+  } 
+}
