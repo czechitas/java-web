@@ -15,11 +15,11 @@ layout: null
 <body>
     <div id="page">
         {% include 2019-podzim/java1/title.html %}
-        {% include 2019-podzim/java1/menu.html %}
+        {% include menu.html %}
         <div class="list-lessons">
             {% for post in site.posts %}
             {% if post.categories[0] == "2019-podzim" and post.categories[1] == "java1" %}
-            <div class="lesson">
+            <div class="lesson {% if post.highlight %} highlighted  {% endif %}">
                 <div class="content">
                     <div>
                         <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>

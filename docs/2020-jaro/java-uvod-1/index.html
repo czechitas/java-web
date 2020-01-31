@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
 <head>
@@ -12,76 +15,32 @@
 
 <body>
     <div id="page">
-        <div class="header">
-            <a href="http://www.czechitas.cz/"><img src="../../img/logo.png" alt="Logo Czechitas"/></a>
-        </div>
-        <!-- #header -->
-
-        <div id="title"></div>
-        <script>
-            jQuery("#title").load("title.html");
-        </script>
-        <!-- #title -->
-
-        <!-- menu -->
-
-        <div id="menu-wrap">
-            <ul class="menu">
-                <li><a href="/">Rozcestník</a></li>
-                <li><a href=".">Hlavní stránka</a></li>
-                <li><a href="https://javainstall.czechitas.cz/2019-podzim/community/">Instalační pokyny pro kurz</a></li>
-            </ul>
-        </div>
+        {% include 2020-jaro/java-uvod-1/title.html %}
+        {% include menu.html %}
 
         <!-- NOVÝ OBSAH AŽ ZA TOHLE -->
-
-        <div class="content">
-            
-            <h3>
-                Instalace software na workshop
-            </h3>
-
+        <div class="content markdown-body">
+            <h3>Instalace software na workshop</h3>
             <p>
                 Instrukce najdete zde:
                 <a href="https://javainstall.czechitas.cz/2020-jaro/community/">javainstall.czechitas.cz</a>
             </p>
+            <p>Poznámka: Instalace je univerzální na všechny Java kurzy. Neobsahuje příklady na workshop.</p>
 
-            <p>
-                Poznámka: Instalace je univerzální na všechny Java kurzy. Neobsahuje příklady na workshop.
-            </p>
-
-
-            <h3>
-                Příklady, prezentace, zadání samostatné práce pro tento workshop
-            </h3>
-
+            <h3>Příklady, prezentace, zadání samostatné práce pro tento workshop</h3>
             <p>
                 Archív je zde:
                 <a href="/data/2020-jaro/java-uvod-1/Java-Training--Projects.zip">Java-Training--Projects.zip</a>
             </p>
 
-            <p>
-                Rozbalte zip sem:
-            </p>
-            <table style="font-size-adjust: 0.8">
-                <tr>
-                    <td style="text-align: right;">Windows</td>
-                    <td style="padding-left: 1em;">C:\Java-Training\Projects</td>
-                </tr>
-                <tr>
-                    <td style="text-align: right;">macOS</td>
-                    <td style="padding-left: 1em;">/Users/YOUR_USERNAME/Java-Training/Projects</td>
-                </tr>
-            </table>
-
-            <br/>
-            <br/>
-
-            <p>
-                Pokud jste archív rozbalili správně, měli byste tyto složky:
-            </p>
-
+            <p>Rozbalte zip sem:</p>
             <ul>
+                <li>Windows: C:\Java-Training\Projects</li>
+                <li>macOS: /Users/YOUR_USERNAME/Java-Training/Projects</li>
+            </ul>
+            <p>Pokud jste archív rozbalili správně, měli byste tyto složky:           </p>
+
+            <ul class="tree">
                 <li>Windows</li>
                 <ul>
                     <li>C:</li>
@@ -103,7 +62,7 @@
                 </ul>
             </ul>
 
-            <ul>
+            <ul class="tree">
                 <li>macOS</li>
                 <ul>
                     <li>/</li>
@@ -129,29 +88,11 @@
                         </ul>
                     </ul>
                 </ul>
-            </ul>
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
+            </ul class="tree">
             <h3>
                 Videozáznam z workshopu
             </h3>
-
-            <br/>
-            <br/>
-            <br/>
-
             <iframe width="560" height="315" src="https://www.youtube.com/embed/VLmw5oaKkag" frameborder="0" allowfullscreen=""></iframe>
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
         </div>
         <!-- #content -->
     </div>
