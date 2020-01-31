@@ -4,11 +4,12 @@ layout: null
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="Content-Language" content="cs"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
-    <title>Java 2 - Webové aplikace | Czechitas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="cs" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css" />
+    <title>Java 1 | Czechitas</title>
 </head>
 
 <body>
@@ -18,23 +19,23 @@ layout: null
         <div class="list-lessons">
             {% for post in site.posts %}
             {% if post.categories[0] == "2019-jaro" and post.categories[1] == "java2" %}
-            <div class="lesson {% if post.highlight %} in-progress  {% endif %}">
+            <div class="lesson {% if post.highlight %} highlighted  {% endif %}">
                 <div class="content">
                     <div>
                         <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>
                         {% if post.display_full %}
-                            {{ post.content }}
+                        {{ post.content }}
                         {% else %}
-                            {{ post.excerpt }}
+                        {{ post.excerpt }}
                         {% endif %}
                     </div>
                     <div>
                         <div><a class="button__show" href="{{ post.url }}">Detail zde...</a></div>
-                    </div>                    
-                </div> 
-            {% endif %} 
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}    
             </div>
-            {% endfor %}   
         </div>
     </div>
 </body>
