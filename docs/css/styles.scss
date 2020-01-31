@@ -139,7 +139,7 @@ h4 {
     border: 4px solid var(--bg-course-inprogress);
 }
 
-.finished {
+.passed {
     font-size: 1rem;
     color: var(--tx-secondary-text-color);
     display: inline-block;
@@ -147,8 +147,12 @@ h4 {
     line-height: 1;
 }
 
-.highlighted p.finished {
+.highlighted p.passed {
     display: none;
+}
+
+p.passed::after {
+   content: "JIŽ PROBĚHLO";
 }
 
 .button__show {
