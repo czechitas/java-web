@@ -19,6 +19,7 @@ html {
     --bg-course: white;
     --bg-button: #e5007e;
     --bg-dark-primary-color: #e5007e;
+    --bg-highlighted-lesson: #e5007e10;
 
     /* text colors */
     --tx-text-primary-color: #273582;
@@ -111,8 +112,15 @@ h4 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.lesson {
-    height: 300px;
+.lesson, .content {
+    height: 350px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px 10%;
 }
 
 .button__show:hover,
@@ -122,21 +130,13 @@ h4 {
     transform: scale(1.05);
 }
 
-.lesson:last-child {
-    grid-column: 1 / -1;
-    background-color: var(--bg-default);
-    border: 0px;
-    box-shadow: none;
-    transition: none;
-    transform: scale(1);
-}
-
-.content {
-    margin: 15px 10%;
-}
-
 .highlighted {
     border: 4px solid var(--bg-course-inprogress);
+}
+
+.highlighted-lesson {
+    border: 4px solid var(--bg-course-inprogress);
+    background-color: var(--bg-highlighted-lesson);
 }
 
 .passed {
