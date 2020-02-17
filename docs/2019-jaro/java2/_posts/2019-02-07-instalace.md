@@ -1,5 +1,7 @@
 ---
 display_full: true
+short-title: Instalační pokyny 
+short-description: 
 ---
 Instalační pokyny
 -----------------

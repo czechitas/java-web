@@ -23,7 +23,8 @@ layout: null
                 <div class="content">
                     <div>
                         <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>
-                            <h2>{{ post.title }}</h2>
+                            <h2>{{ post.short-title }}</h2>
+                            <div class="short-description">{{ post.short-description }}</div>
                     </div>
                     <div>
                         <a class="button__show" href="{{ post.url }}">Detail zde...</a>
