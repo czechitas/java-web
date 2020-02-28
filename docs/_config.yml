@@ -18,6 +18,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2020-jaro/java-1"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
