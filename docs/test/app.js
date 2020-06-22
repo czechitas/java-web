@@ -31,5 +31,5 @@ function randomize() {
         text = "Clear";
     }
     labProgress.textContent = text + ", Loading page";
-    frmRandomWebsite.src = "http://random.whatsmyip.org/";
+    frmRandomWebsite.src = "https://random.whatsmyip.org/";
 }
