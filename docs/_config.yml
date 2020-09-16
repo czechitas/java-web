@@ -1,4 +1,4 @@
-title: JavaBrno-Web
+title: Java-Web
 markdown: kramdown
 
 defaults:
@@ -19,6 +19,11 @@ defaults:
       layout: default-post
   - scope:
       path: "2020-jaro/java-1"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
+      path: "2020-podzim/java-1-praha"
       type: "posts"
     values:
       layout: default-post
