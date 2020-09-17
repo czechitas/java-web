@@ -17,7 +17,7 @@ Trvá to zhruba 10-30 sekund.
 
 **Poznámka:**
 Na stránce v GitHubu je vidět, jestli se build a nasazení webu povedlo ✔ nebo selhalo ❌.
-K logům Jekyllu se bohužel nijak dostat nedá. Ty můžete vidět, jen když si Jekyll rozchodíte lokálně.
+K logům Jekyllu se bohužel nijak dostat nedá. Ty můžete vidět jen, když si Jekyll rozchodíte lokálně.
 <img width="626" style="display: block;" src="build-result.png"/>
 
 
@@ -53,9 +53,10 @@ Založení nového dlouhodobého kurzu
 ----------------------------------
 
 Dlouhodobé kurzy typicky používají mechaniku *blogových* příspěvků, kterou poskytuje Jekyll.
-Jde o složku `_posts` se soubory .md. Např. `/2020-jaro/java-2`.
+Jde o složku `_posts` se soubory .md. Např. `/2020-jaro/java-2/_posts`.
+Založení je tedy mírně komplikovanější:
 
-1.  Přidejte si konfiguraci pro vyhledávání `_posts` do souboru `/_config.yml`:
+1.  Přidejte konfiguraci pro vyhledávání `_posts` do souboru `/_config.yml`:
 
     Například pro `/2020-podzim/java-1-praha`:
     ~~~~
@@ -124,8 +125,17 @@ abyste nepřetěžovali CI GitHubu anebo nerozbili živé webové stránky na <h
 
 ### Postup:
 
-1.  Nainstalujte Ruby with DevKit (default).
+1.  Nainstalujte Ruby with DevKit (je to nejběžnější distribuce).
+
     Pro Windows: https://jekyllrb.com/docs/installation/windows/
+
+    Po instalaci vyzkoušejte, že máte ruby v PATH a funguje:
+    ~~~~
+    C:\> ruby --version
+
+    > ruby 2.6.6p146 (2020-03-31 revision 67876) [x64-mingw32]
+    ~~~~
+
 
 
 2.  Nainstalujte Bundler (obdoba Mavenu).
@@ -149,10 +159,11 @@ abyste nepřetěžovali CI GitHubu anebo nerozbili živé webové stránky na <h
     Více info: <https://docs.github.com/en/enterprise/2.14/user/articles/setting-up-your-github-pages-site-locally-with-jekyll#step-2-install-jekyll-using-bundler>
 
 
-4.  Spusťte Jekyll na pozadí a můžete začít provádět změny ve zdrojích
+4.  Spusťte Jekyll na pozadí a můžete začít provádět změny ve zdrojových souborech.
 
     ~~~~
     C:\github--czechitas--java-web\docs> bundle exec jekyll serve
+
     > Configuration file: C:/github--czechitas--java-web/docs/_config.yml
     >             Source: C:/github--czechitas--java-web/docs
     >        Destination: C:/github--czechitas--java-web/docs/_site
