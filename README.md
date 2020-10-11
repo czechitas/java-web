@@ -125,6 +125,7 @@ abyste nepřetěžovali CI GitHubu anebo nerozbili živé webové stránky na <h
 
 ### Postup:
 
+
 1.  Nainstalujte Ruby with DevKit (je to nejběžnější distribuce).
 
     Pro Windows: https://jekyllrb.com/docs/installation/windows/
@@ -177,3 +178,27 @@ abyste nepřetěžovali CI GitHubu anebo nerozbili živé webové stránky na <h
 
 
 Pro zajímavost, kompletní vygenerovaný web je ve složce `/docs/_site`.
+
+## Dockerized build
+Dockerized based on: https://blog.nimbleci.com/2016/08/10/how-to-deploy-a-jekyll-blog-in-docker/
+
+### Continuous build
+
+    docker run --rm -v "$(pwd):/src" -w /src ruby:2.3 sh -c 'bundle install --path vendor/bundle && bundle exec jekyll build --watch'
+    docker build -t czechitas-web-java-1 .
+    docker run -d -p 80:80 -v "$(pwd)/_site:/usr/share/nginx/html" czechitas-web-java-1
+
+### Just create clean image and run
+
+    docker build -t czechitas-web-java-1 .
+    docker run -d -p 80:80 czechitas-web-java-1
+    
+### Make
+
+All actions are available with linux Make commands.
+
+`make build` Build the docker image Jekyll Blog
+`make help` Print help messages.
+`make run` Run the build Jekyll blog server
+`make stop` Stop Jekyll Blog server
+`make watch` Continuous build with running Jekyll server
