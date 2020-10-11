@@ -1,5 +1,6 @@
 title: Java-Web
 markdown: kramdown
+encoding: utf-8
 
 defaults:
   - scope:
@@ -24,6 +25,11 @@ defaults:
       layout: default-post
   - scope:
       path: "2020-podzim/java-1-praha"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
+      path: "2020-podzim/git-ceske-budejovice"
       type: "posts"
     values:
       layout: default-post
