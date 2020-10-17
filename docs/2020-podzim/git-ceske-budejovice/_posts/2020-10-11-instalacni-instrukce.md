@@ -7,11 +7,11 @@ Git - Instalační instrukce
 Před lekcí (17.10.2020) prosím nainstalujte a připravte si následující:
 
 * Naintalujte IntelliJ IDEA (postupujte dle instrukcí https://javainstall.czechitas.cz/2020-jaro/community/).
-* Založte si účet na https://github.com/join
+* Založte si účet na [https://github.com/join](https://github.com/join)
 * Nainstalujte si Git (viz. níže)
 
 Instalačku Gitu naleznete na https://git-scm.com/downloads.
-Tato stránka obsahuje istalační media a instrukce pro Windows, MacOS a Linux.
+Tato stránka obsahuje instalační media a instrukce pro Windows, MacOS a Linux.
 
 Níže naleznete instalační postup pro všechny tyto platformy.
 
@@ -70,7 +70,7 @@ Po úspěšné instalaci by jste měli mít nově v kontektuálním menu (pravé
 
 ### MacOS
 
-Postupujte dle instrukcí na https://git-scm.com/download/mac
+Postupujte dle instrukcí na [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 
 1. Nainstalujte [homebrew](https://brew.sh/)
 2. Nainstalujte Git
@@ -84,9 +84,9 @@ brew install git
 
 ### Linux
 
-Postupujte dle https://git-scm.com/download/linux.
-Příkaz pro instalaci se dle distribuce.
-Nejčastěji by tedy měla vyhovovat příkaz pro Debian/Ubuntu distribuce:
+Postupujte dle [https://git-scm.com/download/linux](https://git-scm.com/download/linux).
+Příkaz pro instalaci se dle distribuce může lišit.
+Nejčastěji by měl vyhovovat příkaz pro Debian/Ubuntu distribuce:
 
 ```
 sudo apt-get install git
