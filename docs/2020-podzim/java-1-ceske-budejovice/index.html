@@ -1,0 +1,48 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
+    <title>Java 1 | Czechitas</title>
+</head>
+
+<body>
+    <div id="page">
+
+        {% include 2020-podzim/java-1-ceske-budejovice/title.html %}
+
+        {% include 2020-podzim/java-1-ceske-budejovice/menu.html %}
+
+        {% for post in site.posts %}
+        {% if post.categories[0] == "2020-podzim" and post.categories[1] == "java-1-ceske-budejovice" %}
+        <div class="content">
+            <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>
+
+            {% if post.display_full %}
+
+                {{ post.content }}
+
+            {% else %}
+
+                {{ post.excerpt }}
+
+                <p>
+                    <a href="{{ post.url }}">Detail zde...</a>
+                </p>
+
+            {% endif %}
+        </div>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
