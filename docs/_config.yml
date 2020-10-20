@@ -29,6 +29,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2020-podzim/java-1-ceske-budejovice"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: "2020-podzim/git-ceske-budejovice"
       type: "posts"
     values:
