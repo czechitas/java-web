@@ -1,11 +1,9 @@
-Úkol 06 - Bankovní účty
+Lekce 8 - Finální úkol: Bankovní účty
 -----------------------
-Lekce 08 - Úkol 06 - Bankovní účty
-----------------------------------
 
-Vyjděte z předpřipraveného projektu **60-Banka-Zadani** (.
+Vyjděte z předpřipraveného projektu **60-Banka-Zadani** [2020-podzim-java-1-cb-banka-zadani.zip](/data/2020-podzim/java-1-ceske-budejovice/2020-podzim-java-1-cb-banka-zadani.zip).
 
-
+Implementujte třídy dle níže uvedené specifikace specifikace.
 
 ### Část 1
 
@@ -63,8 +61,6 @@ V případě, že bude vše fungovat správně, vypíše se:
 BeznyUcet: Vsechny testy jsou OK
 ```
 
-
-
 ### Část 2
 
 Rozšiřte třídu `BeznyUcet` o funkcionalitu *povoleného přečerpání účtu*
@@ -119,8 +115,6 @@ V případě, že bude vše fungovat správně, vypíše se:
 BeznyUcet + Precerpani: Vsechny testy jsou OK
 ```
 
-
-
 ### Část 3 - Dobrovolná část
 
 Tato část je dobrovolná.
@@ -174,8 +168,6 @@ V případě, že bude vše fungovat správně, vypíše se:
 SporiciUcet: Vsechny testy jsou OK
 ```
 
-
-
 ### Testovací třídy
 
 Metoda `main(...)` hotového programu by tedy měla vypadat takto:
@@ -196,25 +188,20 @@ Pokud vám všechny testovací metody projdou, nakonec se 2x vypíše
 `Vsechny testy jsou OK` (nebo 3x v případě splnění i nepovinné části).
 Pak můžete úkol odevzdat.
 
-
-
 ### Odevzdání domácího úkolu
 
 Nejprve appku/appky zbavte přeložených spustitelných souborů.
 Zařídíte to tak, že v IntelliJ IDEA vpravo zvolíte
-Maven Projects -> Lifecycle -> Clean.
+Maven _Projects -> Lifecycle -> Clean_.
 Úspěch se projeví tak, že v projektové složce zmizí
 podsložka `target`.
 Následně složku s projektem
-zabalte pomocí 7-Zipu pod jménem `Ukol-CISLO-Vase_Jmeno.7z`.
+zabalte pomocí 7-Zipu pod jménem `Ukol-Vase_Jmeno.7z`.
 (Případně lze použít prostý zip, například na Macu).
-Takto vytvořený archív nahrajte na Google Drive do Odevzdávárny.
+Takto vytvořený archív nahrajte Do osobní složky pro odevzdání úkolů
 
 Pokud byste chtěli odevzdat revizi úkolu (např. po opravě),
 zabalte ji a nahrajte ji na stejný Google Drive znovu,
-jen tentokrát se jménem `Ukol-CISLO-Vase_Jmeno-verze2.7z`.
+jen tentokrát se jménem `Ukol-Vase_Jmeno-verze2.7z`.
 
-Termín odevzdání je dva dny před další lekcí, nejpozději 23:59.
-Tedy pokud je další lekce ve čtvrtek, termín je úterý 23:59.
-Pokud úkol nebo revizi odevzdáte později,
-prosím pošlete svému opravujícímu kouči/lektorovi email nebo zprávu přes FB.
+Termín odevzdání je 4. listopadu 2020
