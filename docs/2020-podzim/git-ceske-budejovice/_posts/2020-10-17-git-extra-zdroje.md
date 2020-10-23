@@ -1,5 +1,5 @@
 ---
-display_full: true
+display_full: false
 ---
 Git - Zdroje a odkazy
 ---------------------------------------------------
