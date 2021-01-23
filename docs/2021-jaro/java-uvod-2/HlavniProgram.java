@@ -17,25 +17,26 @@ public class HlavniProgram {
         garfield.turnRight();
         garfield.moveForward(700);
 
-        /*
-        // Obejdete s mickou "lezatou osmicku" kolem hran herniho okna.
-        micka.moveForward(400);
-        micka.turnRight();
-        micka.moveForward(400);
-        micka.turnLeft();
-        micka.moveForward(500);
-        micka.turnLeft();
-        micka.moveForward(400);
-        micka.turnLeft();
-        micka.moveForward(500);
-        micka.turnLeft();
-        micka.moveForward(400);
-        micka.turnRight();
-        micka.moveForward(500);
-        micka.turnRight();
-        micka.moveForward(400);
-        micka.turnRight();
-         */
+        micka.setBrain( it -> {
+            // Obejdete s mickou "lezatou osmicku" kolem hran herniho okna.
+            micka.moveForward(400);
+            micka.turnRight();
+            micka.moveForward(400);
+            micka.turnLeft();
+            micka.moveForward(500);
+            micka.turnLeft();
+            micka.moveForward(400);
+            micka.turnLeft();
+            micka.moveForward(500);
+            micka.turnLeft();
+            micka.moveForward(400);
+            micka.turnRight();
+            micka.moveForward(500);
+            micka.turnRight();
+            micka.moveForward(400);
+            micka.turnRight();
+        });
+
 
         new Cheese(500, 300);
 
