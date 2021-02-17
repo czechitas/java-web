@@ -2,4 +2,6 @@
 /**/.idea/
 /**/.vscode/
 *.iml
+.jekyll-metadata
 Gemfile.lock
+start-serve.bat
