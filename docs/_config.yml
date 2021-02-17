@@ -1,6 +1,7 @@
-title: Java-Web
+title: Web java.czechitas.cz
 markdown: kramdown
 encoding: utf-8
+includes_dir: "/"
 
 defaults:
   - scope:
