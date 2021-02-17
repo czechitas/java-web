@@ -14,7 +14,7 @@
 <body>
 
     {% assign base_url = page.categories | join: "/" %}
-    {% assign title_url = base_url | append: "/_includes/title.html" %}
+    {% assign title_url = base_url | append: "/_includes/breadcrumb.html" %}
     {% assign menu_url = base_url | append: "/_includes/menu.html" %}
 
     <header class="top-nav">
