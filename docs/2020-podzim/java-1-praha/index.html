@@ -1,48 +1,70 @@
 ---
-layout: null
 ---
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="cs"/>
-
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
-    <title>Java 1 | Czechitas</title>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 1</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <div id="page">
 
-        {% include 2020-podzim/java-1-praha/title.html %}
+    <header class="top-nav">
+        <div class="top-nav-holder vertical-box">
+            <a href="/">
+                <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+            </a>
+            {% include_relative _includes/menu.html %}
+        </div>
+    </header>
 
-        {% include 2020-podzim/java-1-praha/menu.html %}
+    <nav class="breadcrumb vertical-box">
+        <a href="/">
+            <span class="icon">&#xE935;</span>
+            Kurzy
+        </a>
+        {% include_relative _includes/breadcrumb.html %}
+    </nav>
+
+    <h1 class="heading">Java 1 (Praha)</h1>
+    <h2 class="subheading">Tříměsíční kurz Javy pro začátečníky</h2>
+
+    <section class="content vertical-box">
 
         {% for post in site.posts %}
         {% if post.categories[0] == "2020-podzim" and post.categories[1] == "java-1-praha" %}
-        <div class="content">
-            <span class="published-timestamp">Vloženo: {{ post.date | date: "%-d. %-m. %Y" }}</span>
+        <article class="blog-list-item">
+            <div class="timestamp">
+                Vloženo:
+                <strong itemprop="datePublished">{{ post.date | date: "%-d. %-m. %Y" }}</strong>
+            </div>
 
             {% if post.display_full %}
 
-                {{ post.content }}
+                <article class="markdown-body">
+                    {{ post.content }}
+                </article>
 
             {% else %}
 
-                {{ post.excerpt }}
+                <article class="markdown-body">
+                    {{ post.excerpt }}
+                </article>
 
-                <p>
-                    <a href="{{ post.url }}">Detail zde...</a>
-                </p>
+                <a href="{{ post.url }}" class="rounded-button">Detail zde...<span class="icon">&#xE944;</span></a>
 
             {% endif %}
-        </div>
+        </article>
 
         {% endif %}
         {% endfor %}
 
-    </div>
+    </section>
 
 </body>
 </html>

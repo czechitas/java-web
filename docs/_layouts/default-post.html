@@ -1,53 +1,55 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="cs"/>
-
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/menu.css"/>
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/> -->
-    <title>Java | Czechitas</title>
-    <style>
-    	.markdown-body {
-    		box-sizing: border-box;
-    		min-width: 200px;
-    		max-width: 1200px;
-    		margin: 0 auto;
-    		padding: 45px;
-    	}
-
-    	@media (max-width: 767px) {
-    		.markdown-body {
-    			padding: 15px;
-    		}
-    	}
-    </style>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java Czechitas</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <div id="page">
 
-{% assign base_url = page.categories | join: "/" | append: "/" %}
-{% assign title_url = base_url | append: "title.html" %}
-{% assign menu_url = base_url | append: "menu.html" %}
+    {% assign base_url = page.categories | join: "/" %}
+    {% assign title_url = base_url | append: "/_includes/breadcrumb.html" %}
+    {% assign menu_url = base_url | append: "/_includes/menu.html" %}
 
-{% include {{ title_url }} %}
-{% include {{ menu_url }} %}
+    <header class="top-nav">
+        <div class="top-nav-holder vertical-box">
+            <a href="/">
+                <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+            </a>
 
-
-        <div class="content">
-            <span class="published-timestamp">Vloženo: {{ page.date | date: "%-d. %-m. %Y" }}</span>
-
-            <article class="markdown-body">
-
-{{ content }}
-
-            </article>
-
-
+            {% include {{menu_url}} %}
         </div>
-	</div>
+    </header>
+
+    <nav class="breadcrumb vertical-box">
+        <a href="/">
+            <span class="icon">&#xE935;</span>
+            Kurzy
+        </a>
+        {% include {{title_url}} %}
+        <a>{{ page.title }}</a>
+    </nav>
+
+    <section class="content vertical-box">
+
+        <div class="timestamp">
+            Vloženo:
+            <strong itemprop="datePublished">{{ page.date | date: "%-d. %-m. %Y" }}</strong>
+        </div>
+
+        <article class="markdown-body vertical-box">
+
+            {{ page.content }}
+
+        </article>
+
+	</section>
 
 </body>
 </html>

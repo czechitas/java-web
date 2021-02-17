@@ -1,0 +1,411 @@
+@font-face {
+    font-family: "Merriweather";
+    src: url("/fonts/Merriweather-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("/fonts/Merriweather-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Perfograma";
+    src: url("/fonts/Perfograma.eot?#iefix") format("embedded-opentype"), url("/fonts/Perfograma.woff") format("woff"), url("/fonts/Perfograma.ttf") format("truetype"), url("/fonts/Perfograma.svg") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Font Awesome";
+    src: url("/fonts/Font-Awesome-Regular-400.ttf");
+}
+
+@font-face {
+    font-family: "czechitas-icon";
+    src: url("/fonts/Czechitas-icon.ttf");
+}
+
+body {
+    font-family: "Merriweather", serif;
+    margin: 0;
+}
+
+.vertical-box {
+    min-width: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.icon {
+    font-family: "czechitas-icon";
+}
+
+.rounded-button {
+    outline: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    border-radius: 40px;
+    border: 2px solid #e5007d;
+    color: #e5007d;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: .25rem 1.5rem;
+    margin: 1rem 0;
+    display: inline-block;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.top-nav {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 35px;
+}
+
+.top-nav-holder {
+    margin: 10px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.top-nav-holder a {
+    text-decoration: none;
+}
+
+.cz-logo {
+    width: 197px;
+}
+
+.short-nav {
+    display: inline-flex;
+    margin: 0 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.short-nav li {
+    margin-left: 50px;
+}
+
+.short-nav li a {
+    font-size: .85rem;
+    margin-left: 0;
+    color: #333;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.short-nav li a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    display: block;
+    background: #333;
+    margin-left: 10%;
+    transition: .3s ease;
+}
+
+.short-nav li a:hover::after {
+    width: 80%;
+}
+
+@media (max-width: 800px) {
+    .top-nav {
+        box-shadow: 0 14px 20px rgba(0,0,0,.1);
+    }
+
+    .top-nav-holder {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .short-nav {
+        margin-top: 10px;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .short-nav li {
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.breadcrumb {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: .85rem;
+    letter-spacing: .125rem;
+}
+
+.breadcrumb a {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: #273582;
+}
+
+.breadcrumb a:hover {
+    color: #2a6496;
+}
+
+.breadcrumb a::after {
+    content: "/";
+    margin-left: .5em;
+    margin-right: -.75em;
+}
+
+.breadcrumb a:last-child {
+    color: #999;
+}
+
+.breadcrumb a:last-child::after {
+    content: "";
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.heading {
+    font-family: "Perfograma", sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: .125rem;
+    font-weight: 400;
+    color: #999;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media (max-width: 750px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+}
+
+.subheading {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.semester {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    padding-top: 100px;
+    clear: both;
+}
+
+.semester-events {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.event {
+    box-sizing: border-box;
+    width: 390px;
+    font-family: "Open Sans", sans-serif;
+    margin-left: 0;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    color: rgba(236, 0, 139, 1);
+}
+
+@media (max-width: 750px) {
+    .event {
+        margin-left: 8px;
+        margin-right: 8px;
+        width: calc(99% - 10px);
+    }
+}
+
+.event .name {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.event .date .day {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.event .date .month {
+    color: #999;
+}
+
+.event .hours {
+    color: #999;
+}
+
+.event .location {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.event .lessonCount {
+    margin-top: 10px;
+}
+
+.event .intensity {
+}
+
+.event .difficulty {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.event .label-difficulty {
+}
+
+.event .icon-difficulty {
+    margin-left: 10px;
+    font-size: 3rem;
+}
+
+.event .description {
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.timestamp {
+    font-family: "Open Sans", sans-serif;
+    font-size: .85rem;
+    color: #656d76;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.blog-list-item {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-list-item header {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.45rem;
+    padding-top: 15px;
+}
+
+.blog-list-item header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-list-item .markdown-body h1, .blog-list-item .markdown-body h2 {
+    border: none;
+}
+
+.blog-list-item .markdown-body {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+.markdown-body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+	box-sizing: border-box;
+}
+
+table.column-1-right-align tr > td:first-child {
+    text-align: right;
+}
+
+.filesystem-tree {
+    padding-left: 0!important;
+}
+
+.filesystem-tree li + li {
+    margin-top: 0;
+}
+
+.filesystem-tree li {
+    list-style: none;
+}
+
+.filesystem-tree li::before {
+    padding-right: 0.5em;
+    font-family: monospace;
+    content: "\251c\2500";
+    color: #909090;
+}
+
+.filesystem-tree li:last-of-type::before {
+    content: "\2514\2500";
+}
+
+.filesystem-tree > li::before {
+    font-family: "Font Awesome" !important;
+    content: "\f0a0" !important;
+}
