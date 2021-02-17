@@ -5,4 +5,4 @@ Instalační pokyny
 -----------------
 
 Proveďte, prosím, instalaci podle pokynů zde:
-<https://javainstall.czechitas.cz/2019-jaro/install-ultimate/>
+<https://javainstall.czechitas.cz/2019-jaro/ultimate/>

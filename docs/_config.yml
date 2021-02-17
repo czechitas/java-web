@@ -1,6 +1,7 @@
 title: Web java.czechitas.cz
 markdown: kramdown
 encoding: utf-8
+exclude: [.idea, .vscode]
 includes_dir: "/"
 
 defaults:

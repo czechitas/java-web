@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="cs"/>
     <meta name="viewport" content="width=device-width"/>
-    <title>Java Czechitas</title>
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -13,17 +12,19 @@
 </head>
 <body>
 
-    {% assign base_url = page.categories | join: "/" %}
-    {% assign title_url = base_url | append: "/_includes/title.html" %}
-    {% assign menu_url = base_url | append: "/_includes/menu.html" %}
-
     <header class="top-nav">
         <div class="top-nav-holder vertical-box">
             <a href="/">
                 <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
             </a>
-
-            {% include {{menu_url}} %}
+            <ul class="short-nav">
+                <li>
+                    <a href="/">Kurzy</a>
+                </li>
+                <li>
+                    <a href="{{ page.url }}">Tento kurz</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -32,24 +33,17 @@
             <span class="icon">&#xE935;</span>
             Kurzy
         </a>
-        {% include {{title_url}} %}
-        <a>{{ page.title }}</a>
+        <a>{{ page.semester_name }}</a>
+        <a href="{{ page.url }}">{{ page.title }}</a>
     </nav>
 
-    <section class="content vertical-box">
+    <h1 class="heading">{{ page.title }}</h1>
 
-        <div class="timestamp">
-            Vloženo:
-            <strong itemprop="datePublished">{{ page.date | date: "%-d. %-m. %Y" }}</strong>
-        </div>
+    <section class="content vertical-box markdown-body">
 
-        <article class="markdown-body vertical-box">
+        {{ page.content }}
 
-            {{ page.content }}
-
-        </article>
-
-	</section>
+    </section>
 
 </body>
 </html>
