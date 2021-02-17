@@ -1,2 +1,5 @@
-_site/
-/.idea/
+/**/_site/
+/**/.idea/
+/**/.vscode/
+*.iml
+Gemfile.lock
