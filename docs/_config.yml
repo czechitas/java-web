@@ -49,7 +49,12 @@ defaults:
       path: "2020-podzim/java-online"
       type: "posts"
     values:
-        layout: default-post
+      layout: default-post
+  - scope:
+      path: "2021-jaro/java-2"
+      type: "posts"
+    values:
+      layout: default-post
   - scope:
       path: ""
       type: "posts"
