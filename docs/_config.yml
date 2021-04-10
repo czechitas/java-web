@@ -56,6 +56,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2021-jaro/java-1-brno"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
