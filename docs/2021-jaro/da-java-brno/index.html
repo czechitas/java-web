@@ -1,133 +1,70 @@
 ---
-layout: default-single-day-course
-title: DA - Programování 1 - Java
-semester_name: 2021 Jaro
 ---
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 1</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
 
-<h3>Instalace software na workshop</h3>
-<p>
-    Instalační pokyny:
-    <a href="https://javainstall.czechitas.cz/2021-jaro/community/">javainstall.czechitas.cz</a>
-</p>
+    <header class="top-nav">
+        <div class="top-nav-holder vertical-box">
+            <a href="/">
+                <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+            </a>
+            {% include_relative _includes/menu.html %}
+        </div>
+    </header>
 
-<p>
-    Poznámka: Instalace je univerzální na všechny Java kurzy.
-    Neobsahuje příklady na workshop.
-</p>
+    <nav class="breadcrumb vertical-box">
+        <a href="/">
+            <span class="icon">&#xE935;</span>
+            Kurzy
+        </a>
+        {% include_relative _includes/breadcrumb.html %}
+    </nav>
 
+    <h1 class="heading">DA: Testování (Brno)</h1>
+    <h2 class="subheading">Tříměsíční kurz pro budoucí testerky</h2>
 
-<h3>Příklady pro tento workshop</h3>
-<p>
-    Archívy jsou zde:
-    <a href="/data/2021-jaro/da-java-brno/Java-Training--Projects.zip">Java-Training--Projects.zip</a>
-    <br>
-    <a href="/data/2021-jaro/da-java-brno/Java-Training-2--Projects.zip">Java-Training-2--Projects.zip</a>
-    <br>
-    <a href="/data/2021-jaro/da-java-brno/Java-Training-3--Projects.zip">Java-Training-3--Projects.zip</a>
-    <br>
-    <a href="/data/2021-jaro/da-java-brno/Domaci-Ukol.zip">Domaci-Ukol.zip</a>
-    <br>
-    <a href="/data/2021-jaro/da-java-brno/Java-Training--Projects--DA-Testovani-4.zip">Java-Training--Projects--DA-Testovani-4.zip</a>
-</p>
+    <section class="content vertical-box">
 
-<p>Příklady si rozbalte do:</p>
-<table class="column-1-right-align">
-    <tr>
-        <td>Windows</td>
-        <td>C:\Java-Training\Projects\DA-Testovani</td>
-    </tr>
-    <tr>
-        <td>macOS</td>
-        <td>/Users/<i>YOUR_USERNAME</i>/Java-Training/Projects/DA-Testovani</td>
-    </tr>
-    <tr>
-        <td>Linux</td>
-        <td>/home/<i>YOUR_USERNAME</i>/Java-Training/Projects/DA-Testovani</td>
-    </tr>
-</table>
+        {% for post in site.posts %}
+        {% if post.categories[0] == "2021-jaro" and post.categories[1] == "da-java-brno" %}
+        <article class="blog-list-item">
+            <div class="timestamp">
+                Vloženo:
+                <strong itemprop="datePublished">{{ post.date | date: "%-d. %-m. %Y" }}</strong>
+            </div>
 
-<p>Pokud jste archív rozbalili správně, měli byste tyto složky:</p>
+            {% if post.display_full %}
 
-<h4>Windows</h4>
-<ul class="filesystem-tree">
-    <li>C:</li>
-    <ul>
-        <li>Java-Training</li>
-        <ul>
-            <li>Projects</li>
-            <ul>
-                <li>DA-Testovani</li>
-                    <ul>
-                        <li>Java-Automatizace-1</li>
-                        <ul>
-                            <li>10-Wikipedia...</li>
-                            <li>...</li>
-                            <li>30-Jednoduche_selektory-Zadani</li>
-                            <li>...</li>
-                        </ul>
-                    </ul>
-                </ul>
-            </ul>
-        </ul>
-    </ul>
-</ul>
+                <article class="markdown-body">
+                    {{ post.content }}
+                </article>
 
-<h4>macOS</h4>
-<ul class="filesystem-tree">
-    <li>/</li>
-    <ul>
-        <li>Users</li>
-        <ul>
-            <li><i>YOUR_USERNAME</i></li>
-            <ul>
-                <li>Java-Training</li>
-                <ul>
-                    <li>Projects</li>
-                    <ul>
-                        <li>DA-Testovani</li>
-                            <ul>
-                                <li>Java-Automatizace-1</li>
-                                <ul>
-                                    <li>10-Wikipedia...</li>
-                                    <li>...</li>
-                                    <li>30-Jednoduche_selektory-Zadani</li>
-                                    <li>...</li>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </ul>
-                </ul>
-            </ul>
-        </ul>
-    </ul>
-</ul>
+            {% else %}
 
-<h4>Linux</h4>
-<ul class="filesystem-tree">
-    <li>/</li>
-    <ul>
-        <li>home</li>
-        <ul>
-            <li><i>YOUR_USERNAME</i></li>
-            <ul>
-                <li>Java-Training</li>
-                <ul>
-                    <li>Projects</li>
-                    <ul>
-                        <li>DA-Testovani</li>
-                            <ul>
-                                <li>Java-Automatizace-1</li>
-                                <ul>
-                                    <li>10-Wikipedia...</li>
-                                    <li>...</li>
-                                    <li>30-Jednoduche_selektory-Zadani</li>
-                                    <li>...</li>
-                                </ul>
-                            </ul>
-                        </ul>
-                    </ul>
-                </ul>
-            </ul>
-        </ul>
-    </ul>
-</ul>
+                <article class="markdown-body">
+                    {{ post.excerpt }}
+                </article>
+
+                <a href="{{ post.url }}" class="rounded-button">Detail zde...<span class="icon">&#xE944;</span></a>
+
+            {% endif %}
+        </article>
+
+        {% endif %}
+        {% endfor %}
+
+    </section>
+
+</body>
+</html>
