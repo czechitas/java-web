@@ -1,9 +1,9 @@
 ---
 ---
-Automatizované testování - Lekce 1
+Automatizované testování - Lekce 2
 ----------------------------------
 
-V první lekci si vyzkoušíme práci se Seleniem z Javy.
+Ve druhé lekci se podíváme na pokročilejší techinky práce se Seleniem z Javy.
 
 
 
