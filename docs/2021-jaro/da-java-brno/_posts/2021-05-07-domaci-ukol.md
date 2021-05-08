@@ -14,17 +14,17 @@ se kterou jste se už setkali: <br/>
 
 Vytvořte automatizované testy:
 
-1.  Rodič s existujícím účtem se může přihlásit do webové aplikace.
+1.  Rodič s existujícím účtem se musí být schopen přihlásit do webové aplikace.
 
     Poznámka: Nepište automatizovaný test na zakládání nového účtu rodiče.
     Účet si připravte dopředu ručně nebo použijte svůj již existující z kurzu manuálního testování.
 
 
-2.  Rodič s existujícím účtem může přihlásit svoje dítě na kurz tak,
+2.  Rodič s existujícím účtem musí být schopen přihlásit svoje dítě na kurz tak,
     že nejprve vybere kurz a potom se přihlásí ke svému účtu.
 
 
-3.  Rodič s existujícím účtem může přihlásit svoje dítě na kurz tak,
+3.  Rodič s existujícím účtem musí být schopen přihlásit svoje dítě na kurz tak,
     že se nejprve přihlásí ke svému účtu a potom vybere kurz.
 
 
@@ -50,7 +50,7 @@ Vytvořte automatizované testy:
 -   Někdy se může stát, že stejné tlačítko se stejným textem je na stránce vícekrát
     a vy si chcete vybrat například 3. výskyt.
     V takových případech je možné to udělat pomocí sofistikovaného dotazu XPath,
-    ale snadnější může být to provést v Javě dvoukrokově:
+    ale snadnější může být to provést v Javě dvoukrokově:<br/>
     Nejprve vybrat pomocí `findElements()` všechny výskyty,
     a potom si ze seznamu (`List<WebElement>`) vybrat jen ten 1 element, na který jste mířili.
 
@@ -67,7 +67,7 @@ Vytvořte automatizované testy:
     tlacitkoViceInformaci.click();
     ~~~~
 
--   Pokud chcete poslat do textového políčka klávesu `Enter` (zvolit aktuální volbu), lze to provést pomocí znaku `\n`:
+-   Pokud chcete poslat do textového políčka klávesu `Enter` (zvolit aktuální volbu), lze to provést pomocí zástupného znaku `\n`:
 
     ~~~~java
     polickoTerminuKurzu.sendKeys("\n");
