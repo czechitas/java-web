@@ -32,6 +32,49 @@ Vytvořte automatizované testy:
 
 
 
+### Tipy
+
+-   Webová appka není uplně přátelská k automatizovaným testům.
+    Hodně elementů bude třeba vyhledávat podle textu,
+    protože jinak nejsou ničím odlišitelné od ostatních elementů.
+    S tím se ale v realitě běžně potkáte.
+    V dlouhodobém horizontu je vhodné požádat vývojáře o přídaní
+    atributu `id` nebo `class` k vámi požadovaným elementům,
+    v krátkodobém horizontu je ale potřeba se s tím smířit.
+
+    Obecně vyhledávání elementů podle textů je nevhodné kvůli budoucím
+    překladům webu do jiného jazyka nebo budoucím změnám textace.
+    Z krátkodobého hlediska to ale zas takový problém není.
+
+
+-   Někdy se může stát, že stejné tlačítko se stejným textem je na stránce vícekrát
+    a vy si chcete vybrat například 3. výskyt.
+    V takových případech je možné to udělat pomocí sofistikovaného dotazu XPath,
+    ale snadnější může být to provést v Javě dvoukrokově:
+    Nejprve vybrat pomocí `findElements()` všechny výskyty,
+    a potom si ze seznamu (`List<WebElement>`) vybrat jen ten 1 element, na který jste mířili.
+
+    Například: Chcete kliknout na odkaz `Více informací` v obdelníčku 3. kurzu.
+    Pokud je tedy element tlačítka například `<a>`,
+    přesněji `<div class="card">...<a>Více informací</a>...</div>`,
+    můžete zkusit toto:
+    ~~~~java
+    List<WebElement> seznamTlacitekViceInformaciVsechKurzu =
+            prohlizec.findElements(By.xpath(
+                    "//div[@class = 'card']//a[text() = 'Více informací']"
+            ));
+    WebElement tlacitkoViceInformaci = seznamTlacitekViceInformaciVsechKurzu.get(2);
+    tlacitkoViceInformaci.click();
+    ~~~~
+
+-   Pokud chcete poslat do textového políčka klávesu `Enter` (zvolit aktuální volbu), lze to provést pomocí znaku `\n`:
+
+    ~~~~java
+    polickoTerminuKurzu.sendKeys("\n");
+    ~~~~
+
+
+
 ### Výchozí projekt
 
 V reálném světě se jen zřídka zakládá nový projekt od začátku.
