@@ -50,22 +50,30 @@ Vytvořte automatizované testy:
 -   Někdy se může stát, že stejné tlačítko se stejným textem je na stránce vícekrát
     a vy si chcete vybrat například 3. výskyt.
     V takových případech je možné to udělat pomocí sofistikovaného dotazu XPath,
-    ale snadnější může být to provést v Javě dvoukrokově:<br/>
-    Nejprve vybrat pomocí `findElements()` všechny výskyty,
-    a potom si ze seznamu (`List<WebElement>`) vybrat jen ten 1 element, na který jste mířili.
+    nebo v Javě dvoukrokově.
 
     Například: Chcete kliknout na odkaz `Více informací` v obdelníčku 3. kurzu.
     Pokud je tedy element tlačítka například `<a>`,
     přesněji `<div class="card">...<a>Více informací</a>...</div>`,
     můžete zkusit toto:
-    ~~~~java
-    List<WebElement> seznamTlacitekViceInformaciVsechKurzu =
-            prohlizec.findElements(By.xpath(
-                    "//div[@class = 'card']//a[text() = 'Více informací']"
-            ));
-    WebElement tlacitkoViceInformaci = seznamTlacitekViceInformaciVsechKurzu.get(2);
-    tlacitkoViceInformaci.click();
-    ~~~~
+
+    *   XPath:
+        ~~~~xpath
+        ( //div[@class = 'card'] )[3]//a[text()='Více informací']
+        ~~~~
+
+    *   Java: <br/>
+        Nejprve vybrat pomocí `findElements()` všechny výskyty,
+        a potom si ze seznamu (`List<WebElement>`) vybrat jen ten 1 element, na který jste mířili.
+
+        ~~~~java
+        List<WebElement> seznamTlacitekViceInformaciVsechKurzu =
+                prohlizec.findElements(By.xpath(
+                        "//div[@class = 'card']//a[text() = 'Více informací']"
+                ));
+        WebElement tretiTlacitkoViceInformaci = seznamTlacitekViceInformaciVsechKurzu.get(2);
+        tretiTlacitkoViceInformaci.click();
+        ~~~~
 
 -   Pokud chcete poslat do textového políčka klávesu `Enter` (zvolit aktuální volbu), lze to provést pomocí zástupného znaku `\n`:
 
