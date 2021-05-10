@@ -21,12 +21,14 @@ Vytvořte automatizované testy:
 
 
 2.  Rodič s existujícím účtem musí být schopen přihlásit svoje dítě na kurz.
+
     Varianta, že rodič nejprve vybere kurz a potom se přihlásí ke svému účtu,
     vyplní přihlášku, odešle ji a nakonec ve svém seznamu přihlášek zkontroluje,
     že ji systém eviduje.
 
 
 3.  Rodič s existujícím účtem musí být schopen přihlásit svoje dítě na kurz.
+
     Varianta, že se rodič nejprve přihlásí ke svému účtu a potom vybere kurz,
     vyplní, odešle, zkontroluje v seznamu.
 
