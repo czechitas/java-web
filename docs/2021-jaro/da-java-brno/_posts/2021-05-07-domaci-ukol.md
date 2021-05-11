@@ -80,7 +80,16 @@ Vytvořte automatizované testy:
         tretiTlacitkoViceInformaci.click();
         ~~~~
 
--   Pokud chcete poslat do textového políčka klávesu `Enter` (zvolit aktuální volbu), lze to provést pomocí zástupného znaku `\n`:
+
+-   **Rozklikávací menu s termíny kurzů** lze vyplnit například tak,
+    že kliknete do `<div>Vyberte termín...</div>` a potom začnete psát
+    do `<div class="bs-searchbox">`...`<input type="search">`...`</div>`
+    prvních pár číslic z datumu. Až to omezíte na jedinou možnost,
+    stisknete `Enter`.
+
+
+-   Pokud chcete stisknout v textovém políčku klávesu `Enter` (zvolit aktuální volbu),
+    lze to provést pomocí zástupného znaku `\n`:
 
     ~~~~java
     polickoTerminuKurzu.sendKeys("\n");
