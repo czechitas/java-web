@@ -141,15 +141,15 @@ Provedete to tak, že v IntelliJ IDEA vpravo nahoře zvolíte
 Úspěch se projeví tak, že v projektové složce zmizí
 podsložka `target`.
 
-Preferovaný způsob odevzdání je publikování Github.
+Preferovaný způsob odevzdání je publikování na Github.
 V IntelliJ IDEA to jde dokonce udělat téměř na jeden klik:
-`Menu` -> `VCS` -> `Share project on Github`.
+IntelliJ IDEA -> Menu -> `VCS` -> `Share project on Github`.
 
 Delší, ale poctivější způsob je založit repository lokálně,
 přidat do ní soubory projektu (`git add`),
 založit prázdnou repository na Githubu,
 přidat lokální repositoři odkaz na vzdálenou repositoř na Githubu
-(IntelliJ IDEA -> menu -> `Git` -> `Manage remotes`)
+(IntelliJ IDEA -> Menu -> `Git` -> `Manage remotes`)
 a nakonec provést `git push`.
 Podobně jste to dělali v lekci Gitu (zhruba v čase 3:20:00).
 
@@ -157,6 +157,7 @@ Každou změnu v projektu je potom vždy potřeba nástrojem Git na vašem poč�
 a pushnout opět na Github.
 Adresu repository na Githubu vložte do `moje.czechitas.cz` při odevzdávání úkolu.
 
-Pokud se na Github necítíte (což by byla škoda), lze alternativně nahrát zip projektu
+Pokud se na Github necítíte (což by byla ovšem škoda),
+lze alternativně nahrát zip projektu
 pojmenovaný `Automatizované-testy-ukol-Vase_Jmeno.zip`
 na Google Drive a odkaz na soubor vložit do `moje.czechitas.cz` při odevzdávání úkolu.
