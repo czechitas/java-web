@@ -133,24 +133,30 @@ Postupujte takto:
 
 Termín odevzdání je **čtvrtek 13. 5. 23:59**.
 
-Preferovaný způsob odevzdání je takový, že založíte repository na Githubu
-a projekt tam nahrajete (*push*).
+Před odevzdáním je nutné projekt zbavit přeložených souborů
+se strojovým kódem, protože posílání strojového kódu mohou antivirové programy
+nebo Google Drive vyhodnotit jako riziko a zablokovat to.
+Provedete to tak, že v IntelliJ IDEA vpravo nahoře zvolíte
+`Maven` -> `domaci-ukol-jmeno-prijemni` -> `Lifecycle` -> `Clean`.
+Úspěch se projeví tak, že v projektové složce zmizí
+podsložka `target`.
+
+Preferovaný způsob odevzdání je publikování Github.
 V IntelliJ IDEA to jde dokonce udělat téměř na jeden klik:
-`Menu` -> `Git` -> `Github` -> `Share project on Github`.
+`Menu` -> `VCS` -> `Share project on Github`.
+
+Delší, ale poctivější způsob je založit repository lokálně,
+přidat do ní soubory projektu (`git add`),
+založit prázdnou repository na Githubu,
+přidat lokální repositoři odkaz na vzdálenou repositoř na Githubu
+(IntelliJ IDEA -> menu -> `Git` -> `Manage remotes`)
+a nakonec provést `git push`.
+Podobně jste to dělali v lekci Gitu (zhruba v čase 3:20:00).
 
 Každou změnu v projektu je potom vždy potřeba nástrojem Git na vašem počítači commitnout
 a pushnout opět na Github.
 Adresu repository na Githubu vložte do `moje.czechitas.cz` při odevzdávání úkolu.
 
-
 Pokud se na Github necítíte (což by byla škoda), lze alternativně nahrát zip projektu
+pojmenovaný `Automatizované-testy-ukol-Vase_Jmeno.zip`
 na Google Drive a odkaz na soubor vložit do `moje.czechitas.cz` při odevzdávání úkolu.
-Před zazipováním je ale nutné projekt zbavit přeložených souborů
-se strojovým kódem, protože posílání strojového kódu mohou antivirové programy
-nebo Google Drive vyhodnotit jako riziko a zablokovat to.
-Provedete to tak, že v IntelliJ IDEA vpravo zvolíte
-`Maven` -> `domaci-ukol-jmeno-prijemni` -> `Lifecycle` -> `Clean`.
-Úspěch se projeví tak, že v projektové složce zmizí
-podsložka `target`.
-Následně složku s projektem
-zabalte pomocí 7-Zipu (nebo jiného zipu) pod jménem `Automatizované-testy-ukol-Vase_Jmeno.zip`.
