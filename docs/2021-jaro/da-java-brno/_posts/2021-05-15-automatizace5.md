@@ -14,8 +14,8 @@ V poslední, páté lekci se podíváme na domácí úkol, sémantické metody a
 
 ### Špeky
 
-[ScreenshotOnFail](/data/2021-jaro/da-java-brno/ScreenshotOnFail.java)
-[XPathClassNameCondition](/data/2021-jaro/da-java-brno/XPathClassNameCondition.java)
+*   [ScreenshotOnFail](/data/2021-jaro/da-java-brno/ScreenshotOnFail.java)
+*   [XPathClassNameCondition](/data/2021-jaro/da-java-brno/XPathClassNameCondition.java)
 
 
 
