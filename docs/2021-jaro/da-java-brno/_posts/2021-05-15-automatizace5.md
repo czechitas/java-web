@@ -12,6 +12,13 @@ V poslední, páté lekci se podíváme na domácí úkol, sémantické metody a
 
 
 
+### Špeky
+
+[ScreenshotOnFail](/data/2021-jaro/da-java-brno/ScreenshotOnFail.java)
+[XPathClassNameCondition](/data/2021-jaro/da-java-brno/XPathClassNameCondition.java)
+
+
+
 ### Příklady pro tento workshop
 
 Archív je zde:
@@ -119,7 +126,6 @@ Pokud jste archív rozbalili správně, měli byste tyto složky:
 </ul>
 
 
-<!--
 
 ### Úkoly
 
@@ -155,5 +161,3 @@ Pokud jste archív rozbalili správně, měli byste tyto složky:
 6. Rodič nesmí být schopen upravit zrušenou přihlášku ze seznamu přihlášek.
 7. Rodič nesmí být schopen upravit zrušenou přihlášku z detailu přihlášky.
 8. Rodič nesmí být schopen upravit zrušenou přihlášku přímým přístupem na adresu upravovací stránky.
-
--->
