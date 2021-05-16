@@ -129,19 +129,38 @@ Pokud jste archív rozbalili správně, měli byste tyto složky:
 
 ### Úkoly
 
-*   Upravte scenář vytváření přihlášky tak, aby se pokaždé vytvořila pro dítě s unikátním jménem.
+*   Opravte testy ze svého domácího úkolu, aby bežely proti webappce:<br/>
+    https://cz-test-dva.herokuapp.com/
+
+    Vylepšete svůj úkol tak, aby se dala změnit bázová adresa webappky na jednom místě programu.
+    Inspirujte se v demo řešení úkolu a udělejte to pomocí konstanty.
+
+    Poznámka:
+    *   Pokud nechcete nebo nemůžete použít svůj domácí úkol, použijte můj.
+    *   Pokud nechcete ani nemůžete použít ani můj úkol (například proto, že jste domácí úkol zatím nestihli udělat),
+        proveďte úpravy nad projektem `10-Editace_prihlasky`.
+
+
+*   Webappka `cz-test-dva` obsahuje sémantické třídy v HTML začínající `qa-`.
+    Upravte svůj domácí úkol, aby také využíval sémantické třídy v HTML (`qa-*`)
+    místo dosavadních křehkých XPath zacílených na pozici elementu nebo jeho text.
+
+    Poznámka: Platí stejné pravidlo ohledně domácího úkolu, jako výše.
+
+
+*   Upravte scenář vytváření přihlášky z vašeho domácího úkolu tak,
+    aby se pokaždé vytvořila pro dítě s unikátním jménem.
 
     Ideální je pro to použít časové razítko, dostatečně velké náhodné číslo nebo kombinaci obojího.
 
 
-*   Upravte scénář editace přihlášky tak, aby využíval sémantické třídy v HTML (`qa-*`) místo dosavadních krkolomných a křehkých XPath.
-
-
-*   Upravte svůj domácí úkol, aby využíval sémantické třídy v HTML (`qa-*`) místo dosavadních krkolomných a křehkých XPath.
-
+*   Opravte testy ze svého domácího úkolu, aby používaly sémantické metody (tzv. "stepy")
+    a teprve tyto sémantické metody budou používat Selenium.
 
 
 ### Další scénáře
+
+Pokud vše budete mít hotové, můžete zkusit tvořit další scénáře.
 
 #### Login
 
