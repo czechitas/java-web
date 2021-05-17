@@ -1,4 +1,4 @@
-Úkol 01 Bonus - Bublanina
+Lekce 02 - Úkol 01 Bonus - Bublanina
 -------------------
 
 Za domácí úkol je přepsat složenou Bublaninu do Javy do projektu
