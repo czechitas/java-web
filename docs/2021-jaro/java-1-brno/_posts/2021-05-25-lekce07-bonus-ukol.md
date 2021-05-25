@@ -292,6 +292,6 @@ Pokud byste chtěli odevzdat revizi úkolu (např. po opravě),
 zabalte ji a nahrajte ji na stejný Google Drive znovu,
 jen tentokrát se jménem `Ukol-CISLO-Vase_Jmeno-verze2.7z`.
 
-Termín odevzdání je nejpozdějí v 23:59 v den další lekce.
+Termín odevzdání je nejpozdějí v 23:59 v den poslední lekce.
 Pokud úkol nebo revizi odevzdáte později,
 prosím pošlete svému opravujícímu kouči/lektorovi email nebo zprávu přes FB.
