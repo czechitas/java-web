@@ -1,0 +1,70 @@
+---
+---
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 2 - Webové aplikace</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="top-nav-holder vertical-box">
+            <a href="/">
+                <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+            </a>
+            {% include_relative _includes/menu.html %}
+        </div>
+    </header>
+
+    <nav class="breadcrumb vertical-box">
+        <a href="/">
+            <span class="icon">&#xE935;</span>
+            Kurzy
+        </a>
+        {% include_relative _includes/breadcrumb.html %}
+    </nav>
+
+    <h1 class="heading">Java 2 - Webové aplikace</h1>
+    <h2 class="subheading">Tříměsíční kurz webové Javy s frameworkem Spring Boot</h2>
+
+    <section class="content vertical-box">
+
+        {% for post in site.posts %}
+        {% if post.categories[0] == "2021-podzim" and post.categories[1] == "java-2" %}
+        <article class="blog-list-item">
+            <div class="timestamp">
+                Vloženo:
+                <strong itemprop="datePublished">{{ post.date | date: "%-d. %-m. %Y" }}</strong>
+            </div>
+
+            {% if post.display_full %}
+
+                <article class="markdown-body">
+                    {{ post.content }}
+                </article>
+
+            {% else %}
+
+                <article class="markdown-body">
+                    {{ post.excerpt }}
+                </article>
+
+                <a href="{{ post.url }}" class="rounded-button">Detail zde...<span class="icon">&#xE944;</span></a>
+
+            {% endif %}
+        </article>
+
+        {% endif %}
+        {% endfor %}
+
+    </section>
+
+</body>
+</html>
