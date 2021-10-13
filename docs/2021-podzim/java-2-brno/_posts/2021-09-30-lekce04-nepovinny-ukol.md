@@ -1,4 +1,4 @@
-Nepovinný úkol - Seznam obrázků
+Lekce 04 - Úkol 05 (nepovinný) - Seznam obrázků
 -----------------
 
 ### Seznam obrázků profesorů / bezdomovců
