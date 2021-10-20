@@ -66,6 +66,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2021-podzim/da-java-brno"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: "2021-podzim/java-2-brno"
       type: "posts"
     values:
