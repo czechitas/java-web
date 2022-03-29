@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="Content-Language" content="cs"/>
     <meta name="viewport" content="width=device-width"/>
-    <title>Java 2 – webové aplikace</title>
+    <title>Java 1</title>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
@@ -31,30 +31,40 @@
     {% include_relative _includes/breadcrumb.html %}
 </nav>
 
-<h1 class="heading">Java 2 – webové aplikace</h1>
-<h2 class="subheading">Tříměsíční kurz webové Javy s frameworkem Spring Boot</h2>
+<h1 class="heading">Java 1 (online)</h1>
+<h2 class="subheading">Tříměsíční kurz Javy pro začátečníky</h2>
 
 <section class="content vertical-box">
 
     <h1>Informace o kurzu</h1>
-    <p>Kurz se zaměřuje na praktický vývoj webových aplikací (serverové strany) v Javě s frameworkem Spring Boot. Java se nejčastěji používá právě pro vývoj
-        webových aplikací (jejich serverové strany) a také pro vývoj androidových aplikací. Tento kurz se zaměřuje na první z těchto dvou oblastí.</p>
+    <p>Cílem kurzu je získání praktických zkušeností s programováním. Ovládání programátorského editoru (IDE), pochopení pojmů proměnná, metoda, objekt, třída.
+        Algoritmizace a používání jazyka Java v praxi na malých aplikacích pro desktop (Windows, Linux, Mac).</p>
 
-    <p>Jak asi tušíš, webový prohlížeč zpracovává HTML, CSS a JavaScript. Když ale na webu vyplníš nějaký formulář a odešleš ho, dojde tento požadavek na webový
-        server a ten jej musí zpracovat (a výsledky typicky uložit do databáze). A tady přichází ke slovu Java.</p>
+    <h1>Pro koho je kurz určen</h1>
+    <p>Kurz je určen pro začátečnice, které absolvovaly Úvod do programování 1 (bez ohledu na programovací jazyk) a Úvod do programování 2 - Java v rámci
+        Czechitas. Případně pro ty, které Javu zkoušely ve škole. Je nutné rozumět tomu, co je to proměnná, cyklus, podmínka, objekt a volání existujících metod
+        na objektech. Není třeba umět psát vlastní třídy.</p>
 
-    <p>Budeme používat webový server Jetty. Nasazovat na něj webové aplikace se <a href="https://spring.io/projects/spring-boot">Spring Bootem</a>, jejichž
-        jádro bude opřené především o <a href="https://spring.io/projects/spring-framework">Spring MVC</a> se server-side renderingem webových stránek (<a
-                href="https://www.thymeleaf.org">Thymeleaf</a>). V pozdějších lekcích budeme z Javy přistupovat do
-        databáz <a href="https://www.h2database.com/">H2</a> pomocí Spring JDBC Template.</p>
-
-    <p>Na kurzu budeme používat plnou verzi programátorského editoru <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA – Ultimate Edition</a>, kterou nám
-        poskytuje firma <a href="https://www.jetbrains.com/">JetBrains</a> jako sponzorský dar.</p>
+    <h1>Náplň lekcí</h1>
+    <ul>
+        <li>Základ algoritmizace (cykly, podmínky), Proměnné</li>
+        <li>Metody</li>
+        <li>Metody s parametry</li>
+        <li>Metody vracející návratovou hodnotu</li>
+        <li>Tvorba tříd</li>
+        <li>Zapouzdření a vlastnosti</li>
+        <li>Tvorba složitějších tříd</li>
+        <li>Objektové modelování</li>
+        <li>Instanciování existujících objektů z Java SE</li>
+        <li>Jednoduché desktopové aplikace</li>
+        <li>Události actionPerformed, mouseClicked</li>
+        <li>Závěr</li>
+    </ul>
 
     <h1>Přehled lekcí</h1>
     <ul>
         {% for post in site.posts reversed %}
-        {% if post.categories[0] == "2021-jaro" and post.categories[1] == "java-2" and post.ukol != true %}
+        {% if post.categories[0] == "2022-jaro" and post.categories[1] == "java-1-online" and post.ukol != true %}
         <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> {{ post.date | date: "%-d. %-m. %Y" }}</li>
         {% endif %}
         {% endfor %}
@@ -63,44 +73,28 @@
     <h1>Úkoly</h1>
     <ul>
         {% for post in site.posts reversed %}
-        {% if post.categories[0] == "2021-jaro" and post.categories[1] == "java-2" and post.ukol == true %}
+        {% if post.categories[0] == "2022-jaro" and post.categories[1] == "java-1-online" and post.ukol == true %}
         <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> zadání z {{ post.date | date: "%-d. %-m. %Y" }}</li>
         {% endif %}
         {% endfor %}
     </ul>
 
-    <h1>Náplň lekcí</h1>
-    <ul>
-        <li>Webový prohlížeč, webové stránky, webový server</li>
-        <li>HTML stránka generovaná na serveru ze šablony</li>
-        <li>Formuláře v HTML, zpracování na serveru v Javě</li>
-        <li>Přístup do databáze z Javy, Spring JDBC Template</li>
-        <li>HTML tabulka vyplněná z databáze</li>
-        <li>Evidence záznamů ve více tabulkách v databázi</li>
-
-    </ul>
-
     <h1>Organizační pokyny</h1>
-    <p>Materiály pro kurz <em>Java2 – webové aplikace</em>, který pořádá <a href="https://www.czechitas.cz/">Czechitas</a>. Pro komunikaci používáme
-        Facebookovou skupinu <a href="https://www.facebook.com/groups/353725162408920">Java 2 - webové aplikace online jaro 2021</a>.</p>
+    <p>Kurz je každou středu od 18:00 do 20:30 online (přes Zoom).</p>
+    <p>Materiály pro kurz <em>Java 1</em>, který pořádá <a href="https://www.czechitas.cz/">Czechitas</a>. Pro komunikaci používáme
+        <a href="https://java-1-workspace.slack.com">Slack Java 1</a>.</p>
+    <p>Je opravdu důležité, abyste mohli přijít na všechny hodiny. Druhou zásadní podmínkou jsou domácí úkoly. Budete dostávat domácí úkol na většině lekcí,
+        proto počítej, že mimo času lekce (v pondělí večer) bude třeba věnovat kurzu ještě několik hodin, například o víkendu. Domácí úkoly se ukázaly jako
+        nejefektivnější způsob, jak se látku naučit. Máte čas s Javou pořádně experimentovat, řešit problémy a musíte si s nimi poradit. Je dokonce možné řešit
+        úkoly ve dvojici. My vám rádi pomůžeme přes Facebook, Skype, osobně…</p>
+    <p>Úspěšná absolventka kurzu má maximálně 3 absence a musí úspěšně odevzdat všechny povinné domácí úkoly.</p>
+    <p>Podmínky to nejsou nijak složité, to určitě zvládnete. Těšíme se na vás 😀</p>
 
     <h1>Odkazy</h1>
     <h2>Používaný software</h2>
     <ul>
         <li><a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a></li>
         <li><a href="https://www.github.com">GitHub</a></li>
-        <li><a href="https://spring.io/projects/spring-boot">Spring Boot</a></li>
-        <li><a href="https://spring.io/projects/spring-framework">Spring Framework</a></li>
-        <li><a href="https://www.thymeleaf.org">Thymeleaf</a></li>
-        <li><a href="https://www.h2database.com/">H2</a></li>
-    </ul>
-
-    <h2>Videa z předchozích let</h2>
-    <ul>
-        <li><a href="https://www.youtube.com/playlist?list=PLUVJxzuCt9ATwP3dFn5xCHvObtu2EveNZ">Java 2 – Brno (jaro 2017)</a></li>
-        <li><a href="https://www.youtube.com/playlist?list=PLTCx5oiCrIJ6mcuJ1VaY8s0mzFsaMUzp-">Java 2 – Brno (jaro 2018)</a></li>
-        <li><a href="https://www.youtube.com/playlist?list=PLTCx5oiCrIJ7I5m_zJtjZoLS-pxSi859Z">Java 2 – Brno (jaro 2019)</a></li>
-        <li><a href="https://www.youtube.com/playlist?list=PLTCx5oiCrIJ5H1uPvwQYUkhQuznifLe-L">Java 2 – Brno (jaro 2020)</a></li>
     </ul>
 
     <h1>Licence</h1>
