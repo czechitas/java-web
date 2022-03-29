@@ -81,3 +81,8 @@ defaults:
     values:
       permalink: "/:categories/:title:output_ext"
       layout: null
+  - scope:
+      path: "2022-jaro/java-1-online"
+      type: "posts"
+    values:
+      layout: default-post
