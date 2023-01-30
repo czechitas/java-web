@@ -1,0 +1,106 @@
+---
+---
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 1</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="top-nav-holder vertical-box">
+        <a href="/">
+            <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+        </a>
+        {% include_relative _includes/menu.html %}
+    </div>
+</header>
+
+<nav class="breadcrumb vertical-box">
+    <a href="/">
+        <span class="icon">&#xE935;</span>
+        Kurzy
+    </a>
+    {% include_relative _includes/breadcrumb.html %}
+</nav>
+
+<h1 class="heading">Java 1 (online)</h1>
+<h2 class="subheading">Tříměsíční kurz Javy pro začátečníky</h2>
+
+<section class="content vertical-box">
+
+    <h1>Informace o kurzu</h1>
+    <p>Cílem kurzu je získání praktických zkušeností s programováním. Ovládání programátorského editoru (IDE), pochopení pojmů proměnná, metoda, objekt, třída.
+        Algoritmizace a používání jazyka Java v praxi na malých aplikacích pro desktop (Windows, Linux, Mac).</p>
+
+    <h1>Pro koho je kurz určen</h1>
+    <p>Kurz je určen pro začátečnice, které absolvovaly Úvod do programování 1 (bez ohledu na programovací jazyk) a Úvod do programování 2 - Java v rámci
+        Czechitas. Případně pro ty, které Javu zkoušely ve škole. Je nutné rozumět tomu, co je to proměnná, cyklus, podmínka, objekt a volání existujících metod
+        na objektech. Není třeba umět psát vlastní třídy.</p>
+
+    <h1>Náplň lekcí</h1>
+    <ul>
+        <li>Základ algoritmizace (cykly, podmínky), Proměnné</li>
+        <li>Metody</li>
+        <li>Metody s parametry</li>
+        <li>Metody vracející návratovou hodnotu</li>
+        <li>Tvorba tříd</li>
+        <li>Zapouzdření a vlastnosti</li>
+        <li>Tvorba složitějších tříd</li>
+        <li>Objektové modelování</li>
+        <li>Instanciování existujících objektů z Java SE</li>
+        <li>Jednoduché desktopové aplikace</li>
+        <li>Události actionPerformed, mouseClicked</li>
+        <li>Závěr</li>
+    </ul>
+
+    <h1>Přehled lekcí</h1>
+    <ul>
+        {% for post in site.posts reversed %}
+        {% if post.categories[0] == "2023-jaro" and post.categories[1] == "java-1-online" and post.ukol != true %}
+        <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> {{ post.date | date: "%-d. %-m. %Y" }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h1>Úkoly</h1>
+    <ul>
+        {% for post in site.posts reversed %}
+        {% if post.categories[0] == "2023-jaro" and post.categories[1] == "java-1-online" and post.ukol == true %}
+        <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> zadání z {{ post.date | date: "%-d. %-m. %Y" }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h1>Organizační pokyny</h1>
+    <p>Kurz je každé úterý od 18:00 do 20:30 online (přes Zoom). Výjimkou je 21. března, kdy má náš kurz týdenní prázdniny.</p>
+    <p>Materiály pro kurz <em>Java 1</em>, který pořádá <a href="https://www.czechitas.cz/">Czechitas</a>. Pro komunikaci používáme
+        <a href="https://java1-jaro2023.slack.com">Slack Java 1 – jaro 2023</a>.</p>
+    <p>Je opravdu důležité, abyste mohli přijít na všechny hodiny. Druhou zásadní podmínkou jsou domácí úkoly. Budete dostávat domácí úkol na většině lekcí,
+        proto počítej, že mimo času lekce (v pondělí večer) bude třeba věnovat kurzu ještě několik hodin, například o víkendu. Domácí úkoly se ukázaly jako
+        nejefektivnější způsob, jak se látku naučit. Máte čas s Javou pořádně experimentovat, řešit problémy a musíte si s nimi poradit. Je dokonce možné řešit
+        úkoly ve dvojici. My vám rádi pomůžeme přes Facebook, Skype, osobně…</p>
+    <p>Úspěšná absolventka kurzu má maximálně 3 absence a musí úspěšně odevzdat všechny povinné domácí úkoly.</p>
+    <p>Podmínky to nejsou nijak složité, to určitě zvládnete. Těšíme se na vás 😀</p>
+
+    <h1>Odkazy</h1>
+    <h2>Používaný software</h2>
+    <ul>
+        <li><a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a></li>
+        <li><a href="https://www.github.com">GitHub</a></li>
+    </ul>
+
+    <h1>Licence</h1>
+    <p>Materiály jsou vystaveny pod Apache Public Licence a můžete je používat, jak uznáte za vhodné. Jedinou podmínkou je uvedení původních autorů. Autory jsou
+        Kamil Ševeček, Ondřej Kučera, Hana Klimentová a Filip Jirsák.</p>
+</section>
+
+</body>
+</html>
