@@ -1,0 +1,124 @@
+---
+---
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 2 – webové aplikace</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="top-nav-holder vertical-box">
+        <a href="/">
+            <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+        </a>
+        {% include_relative _includes/menu.html %}
+    </div>
+</header>
+
+<nav class="breadcrumb vertical-box">
+    <a href="/">
+        <span class="icon">&#xE935;</span>
+        Kurzy
+    </a>
+    {% include_relative _includes/breadcrumb.html %}
+</nav>
+
+<h1 class="heading">Java 2 – webové aplikace</h1>
+<h2 class="subheading">Tříměsíční kurz webové Javy s frameworkem Spring Boot</h2>
+
+<section class="content vertical-box">
+
+    <h1>Informace o kurzu</h1>
+    <p>Kurz se zaměřuje na praktický vývoj webových aplikací (serverové strany) v Javě s frameworkem Spring Boot. Java se nejčastěji používá právě pro vývoj
+        webových aplikací (jejich serverové strany) a také pro vývoj androidových aplikací. Tento kurz se zaměřuje na první z těchto dvou oblastí.</p>
+
+    <p>Jak asi tušíš, webový prohlížeč zpracovává HTML, CSS a JavaScript. Když ale na webu vyplníš nějaký formulář a odešleš ho, dojde tento požadavek na webový
+        server a ten jej musí zpracovat (a výsledky typicky uložit do databáze). A tady přichází ke slovu Java.</p>
+
+    <p>Budeme používat webový server Jetty. Nasazovat na něj webové aplikace se <a href="https://spring.io/projects/spring-boot">Spring Bootem</a>, jejichž
+        jádro bude opřené především o <a href="https://spring.io/projects/spring-framework">Spring MVC</a> se server-side renderingem webových stránek (<a
+                href="https://freemarker.apache.org">FreeMarker</a>). V pozdějších lekcích budeme z Javy přistupovat do
+        databáz <a href="https://www.h2database.com/">H2</a> pomocí Spring JDBC Template.</p>
+
+    <p>Na kurzu budeme používat plnou verzi programátorského editoru <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA – Ultimate Edition</a>, kterou nám
+        poskytuje firma <a href="https://www.jetbrains.com/">JetBrains</a> jako sponzorský dar.</p>
+
+    <h1>Přehled lekcí</h1>
+    <ul>
+        {% for post in site.posts reversed %}
+        {% if post.categories[0] == "2023-podzim" and post.categories[1] == "java-2-online" and post.ukol != true %}
+        <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> {{ post.date | date: "%-d. %-m. %Y" }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h1>Úkoly</h1>
+    <ul>
+        {% for post in site.posts reversed %}
+        {% if post.categories[0] == "2023-podzim" and post.categories[1] == "java-2-online" and post.ukol == true %}
+        <li><a href="{{ post.url }}" class="rounded-button">{{ post.title }}</a> zadání z {{ post.date | date: "%-d. %-m. %Y" }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h1>Náplň lekcí</h1>
+    <ul>
+        <li>Webový prohlížeč, webové stránky, webový server</li>
+        <li>HTML stránka generovaná na serveru ze šablony</li>
+        <li>Formuláře v HTML, zpracování na serveru v Javě</li>
+        <li>Přístup do databáze z Javy, Spring JDBC Template</li>
+        <li>HTML tabulka vyplněná z databáze</li>
+        <li>Evidence záznamů ve více tabulkách v databázi</li>
+    </ul>
+
+    <h1>Organizační pokyny</h1>
+    <p>Materiály pro kurz <em>Java2 – webové aplikace</em>, který pořádá <a href="https://www.czechitas.cz/">Czechitas</a>. Pro komunikaci používáme
+        Slack <a href="https://java2webovaplikace.slack.com">Java 2 - Webové aplikace</a>.</p>
+
+    <h2>Termíny lekcí</h2>
+    <p>Lekce jsou vždy v úterý od 18:00 do 20:30 online přes Zoom, odkaz je v informačmím e-mailu nebo na Slacku.</p>
+    <ul>
+        <li>19. září</li>
+        <li>26. září</li>
+        <li>3. října</li>
+        <li>10. října</li>
+        <li>17. října</li>
+        <li>24. října</li>
+        <li><em>31. října – přestávka, tento týden lekce nebude</em></li>
+        <li>7. listopadu</li>
+        <li>14. listopadu</li>
+        <li>21. listopadu</li>
+        <li>28. listopadu</li>
+        <li>5. prosince</li>
+        <li>12. prosince</li>
+    </ul>
+
+    <h2>Certifikát</h2>
+    <p>Pro získání certifikátu je potřeba aktivní účast na lekcích (jsou možné maximálně 3 absence) a úspěšné odevzdání všech (cca 9) povinných domácích úkolů.</p>
+
+    <h1>Odkazy</h1>
+    <h2>Používaný software</h2>
+    <ul>
+        <li><a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a></li>
+        <li><a href="https://www.github.com">GitHub</a></li>
+        <li><a href="https://spring.io/projects/spring-boot">Spring Boot</a></li>
+        <li><a href="https://spring.io/projects/spring-framework">Spring Framework</a></li>
+        <li><a href="https://freemarker.apache.org">FreeMarker</a></li>
+        <li><a href="https://www.h2database.com/">H2</a></li>
+    </ul>
+
+    <h1>Licence</h1>
+    <p>Materiály jsou vystaveny pod Apache Public Licence a můžete je používat, jak uznáte za vhodné. Jedinou podmínkou je uvedení původních autorů. Autory jsou
+        Kamil Ševeček, Ondřej Kučera, Hana Klimentová a Filip Jirsák.</p>
+</section>
+
+</body>
+</html>
