@@ -96,6 +96,17 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2024-jaro/java-1-online"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
+      path: "2024-podzim/java-2-online"
+      path: "2024-podzim/java-2-online"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
