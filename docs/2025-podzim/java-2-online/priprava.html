@@ -1,0 +1,143 @@
+---
+---
+<!DOCTYPE html>
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="cs"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Java 2 – webové aplikace</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/github-markdown.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header class="top-nav">
+    <div class="top-nav-holder vertical-box">
+        <a href="/">
+            <img src="/img/logo.png" class="cz-logo" alt="Logo Czechitas"/>
+        </a>
+        {% include_relative _includes/menu.html %}
+    </div>
+</header>
+
+<nav class="breadcrumb vertical-box">
+    <a href="/">
+        <span class="icon">&#xE935;</span>
+        Kurzy
+    </a>
+    {% include_relative _includes/breadcrumb.html %}
+</nav>
+
+<h1 class="heading">Java 2 – webové aplikace</h1>
+<h2 class="subheading">Tříměsíční kurz webové Javy s frameworkem Spring Boot</h2>
+
+<section class="content vertical-box">
+
+    <p>Následující kroky proveď s předstihem ještě před první lekcí.
+        V ideálním případě to zabere jen pár minut, ale je potřeba mít to připravené už před začátkem první lekce.
+        Nenechávej to na poslední chvíli – něco se může zadrhnout a je lepší mít čas na řešení.
+        Pokud by byl s něčím problém, napiš na Discord <a href="https://discord.com/channels/1252875899066388481/1414986257070817411">2797 – Java 2 – Webové aplikace 09/2025 → Otázky a odpovědi</a>.
+        Na první lekci začneme tím, že si ověříme, že vše správně funguje.</p>
+    <p>Pokud jsi absolvovala <strong>kurz Java 2, který běžel na jaře 2025</strong>, máš už GitHub, IntelliJ Idea a Git nainstalované.
+        Doporučuji IntelliJ Idea si zaktualizovat na nejnovější verzi 2025.2.1 (v menu IntelliJ Idea <em>Check for Updates</em>).
+        Hodit se může doplněk
+        <a href="#live-reload">LiveReload</a> do webového prohlížeče, ten jsme v Java 1 nepoužívali.
+        A určitě nezapomeň na <a href="#zoom">aktualizaci Zoomu</a>.</p>
+    <h1>Účet na GitHubu</h1>
+    <p>Nejprve si vytvoř účet na <a href="https://github.com">GitHub</a>u – pokud jej ještě nemáš.
+        Při volbě uživatelského jména mysli na to, že odkaz na GitHub, ve kterém bude tvé přihlašovací jméno, budeš později nejspíš uvádět v životopisu, který budeš rozesílat firmám, až budeš shánět práci jako
+        programátorka.</p>
+    <p>GitHub slouží jako úložiště zdrojových kódů a umožňuje spolupráci více lidí i velkých týmů na projektech.
+        Není jediný svého druhu, ale je největší a nabízí prostor pro soukromé i veřejné projekty zdarma, takže je nejznámější.
+        Zároveň je to tak trochu jako sociální síť, něco jako Facebook nebo možná spíš LinkedIn pro programátory.
+        Je tedy běžné, že programátoři dávají odkaz na svůj GitHub do životopisu, aby se potenciální zaměstnavatel mohl podívat na jejich předchozí práci.</p>
+    <p>My budeme používat GitHub pro získávání zadání, na kterých budeme během lekcí pracovat, a také na odevzdávání úkolů.
+        Využijeme jen zlomek toho, co GitHub nabízí – ale usnadní nám to práci a zároveň se naučíte základy práce s GitHubem.</p>
+    <h1>Doporučené: instalace JetBrains Toolbox</h1>
+    <p>Programovat budeme v IDE <a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a> od <a href="https://www.jetbrains.com">JetBrains</a> (aktuální verze
+        2025.2.1 nebo novější).
+        Ideu si můžeš nainstalovat ručně, ale já doporučuji použít nástroj <a href="https://www.jetbrains.com/toolbox-app/">JetBrains Toolbox App</a>.
+        Je to nástroj, který umožňuje snadnou instalaci všech produktů od JetBrains, jejich aktualizaci a práci s projekty.</p>
+    <p>JetBrains Toolbox App si <a href="https://www.jetbrains.com/toolbox-app/">stáhni</a> (je k dispozici pro Windows, Mac i Linux) a nainstaluj.
+        Na konci instalace zaškrtni, že se má Toolbox App rovnou spustit.
+        Po spuštění se objeví jako ikona <img src="img/jetbrains-toolbox.svg" alt="logo JetBrains Toolbox"> v systémové oblasti (u hodin).</p>
+    <p><img src="img/toolbox.gif" alt="Screencast instalace JetBrains Toolbox"></p>
+    <p>Pokud sis nainstalovala <strong>JetBrains Toolbox</strong>, stačí teď Toolbox otevřít, na záložce <em>Tools</em> najdeš <em>IntelliJ IDEA Ultimate</em>
+        (nejspíš bude hned první) a zvolíš <em>Install</em>.
+        Stažení a instalace trvá pár minut, stačí jen počkat, až se vše dokončí.
+        Po dokončení instalace můžeš kliknutím na řádek <em>IntelliJ IDEA Ultimate</em> spustit.</p>
+    <p>Pokud cheš instalovat IntelliJ IDEA <strong>ručně</strong>, jdi na stránku pro <a href="https://www.jetbrains.com/idea/download/">stažení IntelliJ
+        IDEA</a> a stáhni si variantu <strong>Ultimate</strong>.
+        Po stažení jenom spustíš instalační balík a počkáš, než se Idea nainstaluje.
+        Na konci instalace zvol, že chceš Ideu rovnou spustit.</p>
+    <p><img src="img/idea-manual.gif" alt="Screencast ruční instalace IntelliJ Idea"></p>
+    <h2>První spuštění</h2>
+    <p>Při prvním spuštění se Idea bude shánět po licenci.
+        Verzi Ultimate můžeš zkoušet třicet dní zdarma, takže pro začátek zvol <em>Start trial</em> a podle návodu <a href="https://www.jetbrains.com/help/idea/register.html#start_trial">Start the free trial</a> aktivuje 30denní verzi na vyzkoušneí zdarma.
+        První spuštění Idey chvíli trvá, stejně jako restart po výběru, že chceš použít trial verzi – nelekni se toho, na obrazovce se nic dít nebude, ale Idea
+        na pozadí startuje.
+        Pokud by se ale nic nedělo déle než pět minut, je už to fakt divné 😀</p>
+    <p><img src="img/idea-start.gif" alt="Screencast prvního spuštění IntelliJ Idea"></p>
+    <h1>Instalace Gitu</h1>
+    <p>Pro spolupráci s GitHubem budeme potřebovat nástroj git pro verzování zdrojového kódu.
+        Nebudeme s ním pracovat přímo, ale prostřednictvím Idey.
+        Na začátku využijeme toho, že si ho Idea umí sama stáhnout a nainstalovat.</p>
+    <p>Na úvodní obrazovce Idey (kdy není otevřen žádný projekt) vyber na záložce <em>Projects</em> tlačítko <em>Get from VCS</em>.
+        Idea nabídne možnost stáhnout projekt z nějakého verzovacího systému, např. z Gitu.
+        To v tuto chvíli nechceme, ale využijeme toho, že Idea zjistí nainstalovanou verzi Gitu – a pokud Git nenajde, nabídne jeho stažení a instalaci.
+        Počkej tedy, až vypíše <em>Git is not installed</em> a klikni na <em>Download and install</em>.
+        Na Windows si instalátor Gitu vyžádá administrátorská oprávnění, jinak opět vše proběhned na pozadí a jen počkáš, než se na konci objeví v Idee text
+        <em>Git has been installed</em>.</p>
+    <p><img src="img/git.gif" alt="Screencast instalace Gitu z IntelliJ Idea"></p>
+    <h1>Instalace Javy</h1>
+    <p>Pro vývoj v Javě budeme samozřejmě potřebovat i Javu 😀
+        Jedna Java je součástí IntelliJ Idea, je možné ji pro vývoj použít, ale my si radi nainstalujeme ještě svou verzi Javy, ať máme jistotu, že je to ta
+        správná verze (konkrétně verze <strong>21</strong> LTS - nejnovější Java s dlouhodobou podporou).
+        V průběhu září 2025 sice bude vydána nová verze 25 LTS, ale je lepší pár měsíců počkat, než se jí vše přizpůsobí.
+        Také ve stažení Javy nám pomůže IntelliJ Idea.</p>
+    <p>Na úvodní obrazovce Idey (kdy není otevřen žádný projekt) vyber na záložce <em>Projects</em> tlačítko <em>New project</em>.
+        Normálně se tímto způsobem dá založit nový projekt, my to využijeme jenom pro stažení Javy (přesněji SDK).
+        V okně <em>New project</em> ponech vlevo zvolenou variantu projektu <em>Java</em>a v pravé části rozbal nabídku <em>Project SDK</em> a vyber volbu
+        <em>Download JDK</em>.
+        V dialogu vyber <em>Version</em> <strong>21</strong> a v nabídce <em>Vendor</em> vyber <strong>Amazon Corretto</strong> a klikni na <em>Download</em>.
+        Idea Javu stáhne a nainstaluje.
+        Nyní můžeš okno <em>New Project</em> zavřít tlačítkem <em>Cancel</em>.</p>
+    <p>Snímek obrazovky níže ukazuje starší příklad instalace Javy 11, pro tento kurz instalujeme nejnovější <strong>verzi 21</strong>.</p>
+    <p><img src="img/amazon-corretto.gif" alt="Screencast instalace Amazon Corretto"></p>
+    <h1>Volitelné: doplněk JetBrains Toolbox pro prohlížeč</h1>
+    <p>Pokud máš nainstalovaný <strong>JetBrains Toolbox</strong>, můžeš si do prohlížeče nainstalovat rozšíření, které umožňuje jedním kliknutím otevřít
+        projekt z GitHubu v lokální IntelliJ Idee.
+        Rozšíření jménem <strong>JetBrains Toolbox Extension</strong> je dostupné v příslušných obchodech:</p>
+    <ul>
+        <li><a href="https://chrome.google.com/webstore/detail/jetbrains-toolbox-extensi/offnedcbhjldheanlbojaefbfbllddna">JetBrains Toolbox extension v
+            internetovém obchodě Chrome</a> pro Chrome, Edge nebo Vivaldi
+        </li>
+        <li><a href="https://addons.mozilla.org/cs/firefox/addon/jetbrains-toolbox/">JetBrains Toolbox extension ve Firefox Add-ons</a></li>
+    </ul>
+    <h1 id="live-reload">Volitelné: doplněk LiveReload pro prohlížeč</h1>
+    <p>Při úpravách webových stránek je potřeba často stránku v prohlížeči obnovovat.
+        Dělat to ručně každého přestane brzy bavit, naštěstí do prohlížečů existuje doplněk <a href="http://livereload.com/extensions/">LiveReload</a>, který
+        stránku obnoví, když dojde k její změně:</p>
+    <ul>
+        <li><a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">LiveReload v internetovém obchodě Chrome</a> pro
+            Chrome, Edge nebo Vivaldi
+        </li>
+        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/livereload-web-extension/">LiveReload na Firefox Add-ons</a></li>
+        <li><a href="http://download.livereload.com/2.1.0/LiveReload-2.1.0.safariextz">LiveReload pro Safari</a></li>
+    </ul>
+    <h1 id="zoom">Aktualizace Zoom</h1>
+    <p>Na on-line lekce se budeme připojovat pomocí <a href="https://zoom.us">Zoomu</a>.
+        Zoom se dá používat i z webového prohlížeče, ale doporučuji mít jej raději na počítači nainstalovaný – webová verze nemá všechny možnosti, které má
+        desktopový klient.
+        Klienta si stáhni zde: <a href="https://zoom.us/download#client_4meeting">Zoom Client for Meetings</a>.
+        Pokud už Zoom klienta máš z dřívějška, zkontroluj si, že máš <strong>aktuální verzi</strong>, tedy verzi <strong>6.5.12</strong> (nebo vyšší).
+        Zoom se dříve neaktualizoval automaticky, je lepší aktualizaci vyvolat ručně.
+        Na ikoně Zoomu <img src="img/zoom.svg" alt="logo aplikace Zoom"> v task baru otevři kontextové menu a z něj zvol volbu <em>Check for Updates</em>.
+        Zoom zkontroluje, zda máš poslední verzi – a pokud ne, rovnou stáhne aktualizaci a nainstaluje ji.</p>
+</section>
+
+</body>
+</html>

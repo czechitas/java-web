@@ -111,6 +111,11 @@ defaults:
     values:
       layout: default-post
   - scope:
+      path: "2025-podzim/java-2-online"
+      type: "posts"
+    values:
+      layout: default-post
+  - scope:
       path: ""
       type: "posts"
     values:
